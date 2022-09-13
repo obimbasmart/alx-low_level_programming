@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - driver function
- * Return: 0
+ * Return: int
  */
 int main(void)
 { 
