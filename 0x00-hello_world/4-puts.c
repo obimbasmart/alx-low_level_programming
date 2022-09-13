@@ -1,6 +1,8 @@
 #include <stdio.h>
-
-/*the main driver program*/
+/**
+ * main - main function
+ * Return: 0
+ */
 int main(void)
 {
 puts("\"Programming is like building a multilingual puzzle");
