@@ -3,7 +3,7 @@
  * main - driver function
  * Return: 0
  */
-int main()  
+int main(void)
 { 
 char theChar;
 int theInt;
