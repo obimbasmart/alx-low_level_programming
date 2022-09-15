@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-
-/* print random numbers
+/**
+ * print random numbers
  * more headers goes there
  * main - driver function
  * Return: 0
