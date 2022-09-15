@@ -2,7 +2,7 @@
 /**
  * main - driver function
  * prints all possible combinations of single-digit numbers.
- * return: 0
+ * Return: 0
  */
 int main(void)
 {
