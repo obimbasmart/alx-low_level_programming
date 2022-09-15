@@ -6,10 +6,9 @@
 int main(void)
 {
 int i;
-char numbers[] = "0123456789";
-for (i = 0; i <= 9; i++)
+for (i = 48; i <= 57; i++)
 {
-putchar(numbers[i]);
+putchar(i);
 }
 putchar('\n');
 return (0);
