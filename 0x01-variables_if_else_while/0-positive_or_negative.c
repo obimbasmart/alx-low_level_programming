@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include <time.h>
 /**
- * print random numbers
- * more headers goes there
  * main - driver function
  * Return: 0
  * betty style doc for function main goes there
