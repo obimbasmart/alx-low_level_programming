@@ -5,7 +5,16 @@
  * _putchar - print a single character to output stream
  * Return: 0
  */
-int _putchar(char the_char)
+int main(void)
 {
-return (write(1, &the_char, 1));
+_putchar('_p');
+_putchar('u');
+_putchar('t');
+_putchar('c');
+_putchar('h');
+_putchar('a');
+_putchar('r');
+_putchar('\n');
+
+ return (0)
 }
