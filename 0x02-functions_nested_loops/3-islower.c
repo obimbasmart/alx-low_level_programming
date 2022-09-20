@@ -5,7 +5,7 @@
  * Return: 0 if false
  * Return: 1 if true
  */
-int _islower(int)
+int _islower(int character)
 {
-return ('c' >= 'a' && 'c' <= 'z')
+return (character >= 'a' && character <= 'z');
 }
