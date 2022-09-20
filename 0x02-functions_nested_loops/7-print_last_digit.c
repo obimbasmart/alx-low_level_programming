@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_sign - print the sign of a number
- * @num : int character to test
- * Return: 0 if number is greater than 0,  false < 0
+ * print_last_digit - print the last digit of a number
+ * @num : number to print its last digit
+ * Return: the last digit
  */
 int print_last_digit(int num)
 {
@@ -14,5 +14,5 @@ if (last_digit < 0)
 last_digit = -1 * last_digit;
 }
 _putchar(last_digit + '0');
-return last_digit;
+return (last_digit);
 }
