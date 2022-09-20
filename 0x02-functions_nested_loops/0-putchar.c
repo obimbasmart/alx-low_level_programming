@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * _putchar - print a single character to output stream
+ * main - print a single character to output stream
  * Return: 0
  */
 int main(void)
