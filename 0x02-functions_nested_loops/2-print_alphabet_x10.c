@@ -15,6 +15,6 @@ for (i = 0; i <= 25; i++)
 {
 _putchar(alphas[i]);
 }
-putchar('\n');
+_putchar('\n');
 }
 }
