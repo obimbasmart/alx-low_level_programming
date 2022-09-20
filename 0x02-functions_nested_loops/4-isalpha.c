@@ -7,5 +7,6 @@
  */
 int _isalpha(int character)
 {
-  return ((character >= 65 && character <= 90) || (character >= 97 && character <= 122));
+return ((character >= 65 && character <= 90) \
+        (character >= 97 && character <= 122))
 }
