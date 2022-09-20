@@ -7,7 +7,6 @@
  */
 int _abs(int num)
 {
-int abs_num;
 if (num < 0)
 {
 num  = num * 1;
