@@ -2,11 +2,10 @@
 #include "main.h"
 /**
  * _isalpha - check if a character is in alphabetic
- * @character : int character to test
+ * @ch : int character to test
  * Return: 0 if false 1 if true
  */
-int _isalpha(int character)
+int _isalpha(int ch)
 {
-return ((character >= 65 && character <= 90) \
-        (character >= 97 && character <= 122))
+return ((ch >= 65 && character <= 90) || (ch >= 97 && ch <= 122));
 }
