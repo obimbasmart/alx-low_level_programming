@@ -15,7 +15,7 @@ return (1);
 else if (num == 0)
 {
 _putchar('0');
-return (0)
+return (0);
 }
  _putchar('-');
  return (-1);
