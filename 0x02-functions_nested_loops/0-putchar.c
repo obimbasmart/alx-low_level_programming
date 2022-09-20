@@ -1,10 +1,11 @@
 #include <stdio.h>
+#include <unistd.h>
 #include "main.h"
 /**
- * _putchar - print "_putchar" to output stream
+ * _putchar - print a single character to output stream
  * Return: 0
  */
-void _putchar(void)
+int _putchar(char the_char)
 {
-printf("_putchar");
+return (write(1, &the_char, 1));
 }
