@@ -18,6 +18,7 @@ sum += i;
 i++;
 }
 printf("%d\n", sum);
+return (0);
 }
 /**
 * _ismultiple - check if a number is a multiple of 3 or 5
