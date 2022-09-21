@@ -6,13 +6,13 @@
 */
 void print_times_table(int n)
 {
+int next_result;
+int i;
+i = 0;
 if (n > 15 || n < 0)
 {
 return;
 }
-int next_result;
-int i;
-i = 0;
 while (i <= n)
 {
 int j = 0;
