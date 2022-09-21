@@ -20,7 +20,7 @@ while (i <= n)
 int j = 0;
 while (j <= n)
 {
-re = i * j;
+re = i *j;
 next_result = i * (j + 1);
 if (j != n)
 {
