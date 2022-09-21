@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
-* main - print the first 50 fibonacci numbers
+* main - print the first 98 fibonacci numbers
 * Return: 0
 */
 int main(void)
@@ -18,7 +18,7 @@ for (i = 0; i < 96; i++)
 next = fn + fn_1;
 fn = fn_1;
 fn_1 = next;
-if (i != 47)
+if (i != 95)
 {
 printf("%lu, ", next);
 }
