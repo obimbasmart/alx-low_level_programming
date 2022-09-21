@@ -11,7 +11,8 @@ if (n > 15 || n < 0)
 return;
 }
 int next_result;
-int i = 0;
+int i;
+i = 0;
 while (i <= n)
 {
 int j = 0;
