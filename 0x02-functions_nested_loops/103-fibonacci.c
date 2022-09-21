@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * main - print the sum of even valued 
+ * main - print the sum of even valued
  * fibonacci number less than 400000
  * Return: 0
  */
@@ -20,7 +20,7 @@ for (i = 0; ; i++)
 next = fn + fn_1;
 fn = fn_1;
 fn_1 = next;
-if ( next > 4000000)
+if (next > 4000000)
 {
 break;
 }
