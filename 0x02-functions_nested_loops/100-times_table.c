@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include "main.h"
 /**
-* times_table - prints the 9 times table starting from 0
+* print_times_table - prints the n times table starting from 0
+* @n : the last number in the times_table
 * Return: void
 */
 void print_times_table(int n)
