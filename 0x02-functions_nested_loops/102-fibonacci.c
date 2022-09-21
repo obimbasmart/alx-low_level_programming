@@ -6,13 +6,13 @@
 */
 int main(void)
 {
-unsigned long long int next;
-unsigned long long int fn;
-unsigned long long int fn_1;
+unsigned long int next;
+unsigned long int fn;
+unsigned long int fn_1;
 int i;
 fn = 1;
 fn_1 = 2;
-printf("%d, %d, ", fn, fn_1);
+printf("%lu, %lu, ", fn, fn_1);
 for (i = 0; i < 98; i++)
 {
 next = fn + fn_1;
