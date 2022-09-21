@@ -1,30 +1,30 @@
 #include <stdio.h>
 #include "main.h"
 /**
-* main - print the first 100 fibonacci numbers
+* main - print the first 50 fibonacci numbers
 * Return: 0
 */
 int main(void)
 {
-unsigned long long int next;
-unsigned long long int fn;
-unsigned long long int fn_1;
+unsigned long int next;
+unsigned long int fn;
+unsigned long int fn_1;
 int i;
 fn = 1;
 fn_1 = 2;
-printf("%d, %d, ", fn, fn_1);
-for (i = 0; i < 98; i++)
+printf("%lu, %lu, ", fn, fn_1);
+for (i = 0; i < 48; i++)
 {
 next = fn + fn_1;
 fn = fn_1;
 fn_1 = next;
-if (i != 97)
+if (i != 47)
 {
-printf("%llu, ", next);
+printf("%lu, ", next);
 }
 else
 {
-printf("%llu", next);
+printf("%lu", next);
 }
 }
 putchar('\n');
