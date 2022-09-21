@@ -18,7 +18,7 @@ for (i = 0; i < 48; i++)
 next = fn + fn_1;
 fn = fn_1;
 fn_1 = next;
-if (i != 97)
+if (i != 47)
 {
 printf("%lu, ", next);
 }
