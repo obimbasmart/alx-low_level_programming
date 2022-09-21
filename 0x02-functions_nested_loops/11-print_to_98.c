@@ -8,23 +8,33 @@
 void print_to_98(int n)
 {
 int i;
+if (n <= 98)
+{
 for (i = n; i < 99; i++)
 {
-if (i < 10)
+if (i < 98)
 {
-putchar(i + '0');
+printf("%d, ", i);
 }
 else
 {
-putchar((i / 10) + '0');
-putchar((i % 10) + '0');
+printf("%d", i);
 }
-if (i < 98)
+}
+}
+else
 {
-putchar(',');
-putchar(' ');
+for (i = n; i > 97; i--)
+{
+if (i > 98)
+{
+printf("%d, ", i);
+}
+else
+{
+printf("%d", i);
+}
 }
 }
 putchar('\n');
 }
-
