@@ -20,11 +20,11 @@ fn = fn_1;
 fn_1 = next;
 if (i != 97)
 {
-printf("%llu, ", next);
+printf("%lu, ", next);
 }
 else
 {
-printf("%llu", next);
+printf("%lu", next);
 }
 }
 putchar('\n');
