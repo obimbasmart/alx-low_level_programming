@@ -8,26 +8,31 @@ void times_table(void)
 {
 int next_result;
 int i = 0;
-while (i < 10){
+while (i < 10)
+{
 int j = 0;
 while (j < 10)
 {
 int re = i * j;
-next_result = i * (j+1);
-if (re > 9){
-putchar( (re / 10) + '0');
+next_result = i * (j + 1);
+if (re > 9)
+{
+putchar((re / 10) + '0');
 putchar((re % 10) + '0');
 }
-else{
+else
+{
 putchar(re + '0');
 }
 if (j != 9)
 {
-if (next_result > 9){
+if (next_result > 9)
+{
 putchar(',');
 putchar(' ');
 }
-else{
+else
+{
 putchar(',');
 putchar(' ');
 putchar(' ');
