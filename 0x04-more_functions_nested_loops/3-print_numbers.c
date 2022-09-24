@@ -3,7 +3,7 @@
  * print_numbers - print integer 0-9
  * Return: void
  */
-void print_numbers()
+void print_numbers(void)
 {
 int i;
 i = 0;
