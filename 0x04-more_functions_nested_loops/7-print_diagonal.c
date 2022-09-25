@@ -13,7 +13,7 @@ while (i < n)
 {
 if (n <= 0)
 {
-putchar('\n');
+putchar('A');
 putchar('\n');
 break;
 }
