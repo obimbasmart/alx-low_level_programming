@@ -25,5 +25,4 @@ putchar('\\');
 putchar('\n');
 i++;
 }
-putchar('\n');
 }
