@@ -9,12 +9,17 @@ void print_diagonal(int n)
 int i;
 int k;
 i = 0;
+if (n <= 0)
+{
+i = n - 1;
+}
 while (i < n)
 {
 if (n <= 0)
 {
 putchar('\n');
-break;
+i = n;
+continue;
 }
 k = 0;
 while (k < i)
