@@ -13,7 +13,7 @@ for (l = 0; l < size; l++)
 {
 putchar('#');
 }
-if (w == size)
+if (w == (size - 1))
 {
 break;
 }
