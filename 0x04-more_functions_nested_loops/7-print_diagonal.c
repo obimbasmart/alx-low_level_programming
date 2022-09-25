@@ -11,7 +11,7 @@ int k;
 i = 0;
 if (n <= 0)
 {
-i = n -1;
+i = n - 1;
 }
 while (i < n)
 {
