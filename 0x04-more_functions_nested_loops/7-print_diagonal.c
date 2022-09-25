@@ -8,12 +8,11 @@ void print_diagonal(int n)
 {
 int i;
 int k;
-i = 0;
+i = -1;
 while (i < n)
 {
 if (n <= 0)
 {
-putchar('A');
 putchar('\n');
 break;
 }
