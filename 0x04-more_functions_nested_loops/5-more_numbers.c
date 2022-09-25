@@ -16,10 +16,8 @@ for (num = 0; num < 15; num++)
 if (num > 9)
 {
 putchar((num / 10) + '0');
-putchar((num % 10) + '0');
-continue;
 }
-putchar(num + '0');
+putchar((num % 10) + '0');
 }
 putchar('\n');
 i++;
