@@ -9,7 +9,7 @@ void print_diagonal(int n)
 int i;
 int k;
 i = 0;
-if (n < 0)
+if (n <= 0)
 {
 i = n -1;
 }
