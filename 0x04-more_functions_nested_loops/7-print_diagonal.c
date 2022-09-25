@@ -13,6 +13,7 @@ while (i < n)
 {
 if (n <= 0)
 {
+putchar('\n');
 break;
 }
 k = 0;
