@@ -8,3 +8,5 @@ void print_line(int);
 void print_diagonal(int);
 void print_square(int);
 void print_triangle(int);
+int _isprime(unsigned long int);
+unsigned long int get_highest_prime_factor(unsigned long int);
