@@ -7,10 +7,9 @@
 void print_triangle(int size)
 {
 int hashCounter, spaceCounter;
+int space, hash;
 hashCounter = 1;
 spaceCounter = size;
-int space;
-int hash;
 if (size <= 0)
 {
 putchar('\n');
