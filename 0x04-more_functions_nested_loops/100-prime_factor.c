@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include "main.h"
 int main(void)
+
+/**
+ * main - print the largest prime factor of a num
+ * @num : the number 
+ * Return: 0
+ */
 {
 printf("%lu\n", get_highest_prime_factor(612852475143));
 return (0);
