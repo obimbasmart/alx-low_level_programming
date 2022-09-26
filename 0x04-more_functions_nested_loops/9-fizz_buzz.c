@@ -27,9 +27,10 @@ printf("%d", num);
 }
 if (num != 100)
 {
-putchar('-');
+putchar(' ');
 }
 num++;
 }
 putchar('\n');
+return (0);
 }
