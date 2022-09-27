@@ -5,7 +5,7 @@
  * @n : the number of elements to print
  * Return: void
  */
-void print_array(char *str, int n)
+void print_array(int *str, int n)
 {
 int idx;
 idx = 0;
