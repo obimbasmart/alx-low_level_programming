@@ -14,7 +14,7 @@ while (src[idx] != '\0')
 dest[idx] = src[idx];
 idx++;
 }
-return (dest);
+return (*dest);
 }
 
 
