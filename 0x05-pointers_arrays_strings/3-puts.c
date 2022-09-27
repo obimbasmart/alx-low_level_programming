@@ -13,5 +13,5 @@ while (str[index_count] != '\0')
 putchar(str[index_count]);
 index_count++;
 }
-putchar('n');
+putchar('\n');
 }
