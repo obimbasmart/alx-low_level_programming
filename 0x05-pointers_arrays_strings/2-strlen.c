@@ -11,5 +11,5 @@ while (str[index_count] != '\0')
 {
 index_count++;
 }
-return index_count;
+return (index_count);
 }
