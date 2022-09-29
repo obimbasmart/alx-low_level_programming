@@ -74,10 +74,6 @@ int getNumber(char *str)
 
 }
 
-
-
-
-
 /**
  * getSign - get the sign of a number in a string
  * @str : the string
@@ -104,7 +100,7 @@ int getSign(char *str)
 
         }
 
-        else if (str[idx] == 43)
+        else if (str[idx] == 43 str[idx] == 32)
 
         {
 
