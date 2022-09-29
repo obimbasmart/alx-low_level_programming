@@ -86,15 +86,11 @@ int getNumber(char *str)
 int getSign(char *str)
 {
 
-    int sign, idx, _isalpha, _isnumber;
+    int sign, idx;
 
     sign = 1;
 
     idx = 0;
-
-    _isalpha = 0;
-
-    _isnumber;
 
     while (str[idx] != '\0')
 
