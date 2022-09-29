@@ -115,17 +115,6 @@ int getSign(char *str)
             return sign;
 
         }
-
-        else
-
-        {
-
-            sign = 1;
-
-        }
-
-
-
         idx++;
 
     }
