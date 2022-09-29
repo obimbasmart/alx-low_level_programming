@@ -8,4 +8,7 @@ void puts2(char *str);
 void puts_half(char *str);
 void print_array(int *a, int n);
 char *_strcpy(char *dest, char *src);
+int _atoi(char *str);
+int getNumber(char *str);
+int getSign(char *str);
 
