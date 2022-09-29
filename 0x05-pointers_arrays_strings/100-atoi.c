@@ -24,7 +24,7 @@ int getNumber(char *str)
 
     int _isnumber;
 
-    int number;
+    unsigned int number;
 
     number = 0;
 
