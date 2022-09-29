@@ -100,7 +100,7 @@ int getSign(char *str)
 
         }
 
-        else if (str[idx] == 43 str[idx] == 32)
+        else if (str[idx] == 43 || str[idx] == 32)
 
         {
 
