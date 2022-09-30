@@ -14,7 +14,7 @@ if (str[idx] > 96 && str[idx] < 123)
 {
 if (idx == 0)
 {
-str[idx] = str[idx] -32;
+str[idx] = str[idx] - 32;
 continue;
 }
 if (is_seperator(str[idx - 1]))
