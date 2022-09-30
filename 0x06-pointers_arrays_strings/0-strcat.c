@@ -7,7 +7,6 @@
 char *_strcat(char *dest, char *src)
 {
 unsigned int id_dest, id_src;
-char *temp_string[] = {};
 id_dest = 0;
 while (dest[id_dest] != '\0')
 {
