@@ -7,7 +7,7 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-unsigned int id_dest, id_src;
+int id_dest, id_src;
 id_dest = 0;
 while (dest[id_dest] != '\0')
 {
