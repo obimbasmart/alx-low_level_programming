@@ -14,7 +14,7 @@ while (dest[id_dest] != '\0')
 id_dest++;
 }
 id_src = 0;
-while (id_src < n)
+while (id_src < n && src[id_src] != '\0')
 {
 dest[id_dest + id_src] = src[id_src];
 id_src++;
