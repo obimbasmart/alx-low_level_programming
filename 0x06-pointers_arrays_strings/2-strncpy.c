@@ -14,7 +14,11 @@ while (idx < n && src[idx] != '\0')
 dest[idx] = src[idx];
 idx++;
 }
+while (idx < n)
+{
 dest[idx] = '\0';
+idx++;
+}
 return (dest);
 }
 
