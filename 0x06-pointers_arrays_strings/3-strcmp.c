@@ -5,7 +5,7 @@
  * @s2 : the destination
  * Return: 0, -1, 1
  */
-int *_strcmp(char *s1, char *s2)
+int _strcmp(char *s1, char *s2)
 {
 int idx;
 idx = 0;
