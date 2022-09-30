@@ -4,7 +4,7 @@
  * @n : the numer of elements in the array
  * Return : void
  */
-void *reverse_array(int *a, int n)
+void reverse_array(int *a, int n)
 {
 int temp_var, i;
 i = 0;
