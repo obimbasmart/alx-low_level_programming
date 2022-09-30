@@ -13,11 +13,11 @@ while (s1[idx] != '\0' || s2[idx] != '\0')
 {
 if (s1[idx] > s2[idx])
 {
-return (1);
+return (13);
 }
 else if (s1[idx] < s2[idx])
 {
-return (-1);
+return (-13);
 }
 idx++;
 }
