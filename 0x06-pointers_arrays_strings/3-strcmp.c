@@ -21,8 +21,5 @@ return (-1);
 }
 idx++;
 }
-if (s1[idx - 1] == s2[idx - 1])
-{
 return (0);
-}
 }
