@@ -24,7 +24,7 @@ int getNumber(char *str)
 
     int _isnumber;
 
-    int number;
+    unsigned int number;
 
     number = 0;
 
@@ -74,10 +74,6 @@ int getNumber(char *str)
 
 }
 
-
-
-
-
 /**
  * getSign - get the sign of a number in a string
  * @str : the string
@@ -86,15 +82,11 @@ int getNumber(char *str)
 int getSign(char *str)
 {
 
-    int sign, idx, _isalpha, _isnumber;
+    int sign, idx;
 
     sign = 1;
 
     idx = 0;
-
-    _isalpha = 0;
-
-    _isnumber;
 
     while (str[idx] != '\0')
 
@@ -108,7 +100,7 @@ int getSign(char *str)
 
         }
 
-        else if (str[idx] == 43)
+        else if (str[idx] == 43 || str[idx] == 32)
 
         {
 
@@ -123,17 +115,6 @@ int getSign(char *str)
             return sign;
 
         }
-
-        else
-
-        {
-
-            sign = 1;
-
-        }
-
-
-
         idx++;
 
     }
