@@ -7,11 +7,16 @@
 char *cap_string(char *str)
 {
 int idx;
-idx = 1;
+idx = 0;
 while (str[idx] != '\0')
 {
 if (str[idx] > 96 && str[idx] < 123)
 {
+if (idx == 0)
+{
+str[idx] = str[idx] - 32;
+continue;
+}
 if (is_seperator(str[idx - 1]))
 {
 str[idx] = str[idx] - 32;
