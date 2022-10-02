@@ -30,9 +30,8 @@ idx--;
  */
 int getdigitLength(int num)
 {
-int idx,  n_digit;
+int n_digit;
 n_digit = 0;
-idx = 0;
 while (num != 0)
 {
 num = num / 10;
