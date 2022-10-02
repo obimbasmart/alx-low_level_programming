@@ -13,11 +13,11 @@ idx = n_digit - 1;
 if (num < 0)
 {
 num = num * -1;
-putchar('-');
+_putchar('-');
 }
 while (idx >= 0)
 {
-putchar((num / power(10, idx)) + '0');
+_putchar((num / power(10, idx)) + '0');
 num = num % power(10, idx);
 idx--;
 }
