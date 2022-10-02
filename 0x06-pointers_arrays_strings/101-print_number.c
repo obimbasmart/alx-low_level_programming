@@ -32,6 +32,10 @@ int getdigitLength(int num)
 {
 int n_digit;
 n_digit = 0;
+if (num == 0)
+{
+return (1);
+}
 while (num != 0)
 {
 num = num / 10;
