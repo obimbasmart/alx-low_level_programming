@@ -20,5 +20,5 @@ if (s[idx] == '\0')
 {
 return (s + idx);
 }
-return ('\0');
+return (0);
 }
