@@ -1,5 +1,5 @@
 /**
- * _memset - copy n byte from @src to @dest
+ * _memcpy - copy n byte from @src to @dest
  * @src : the source
  * @dest : the destination
  * @n : the first n bytes
