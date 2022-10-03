@@ -1,8 +1,4 @@
 #include <stdio.h>
-/**
- * main - magic task
- * Return: always 0
- */
 int main(void)
 {
 int n;
