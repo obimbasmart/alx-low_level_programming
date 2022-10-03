@@ -6,19 +6,24 @@
  */
 char *_strchr(char *s, char c)
 {
+char *ptr = 0;
 unsigned int idx;
 idx = 0;
+char check;
 while (s[idx] != '\0')
 {
+check = s[idx];
 if (s[idx] == c)
 {
-return (s + idx);
+ptr = &(s[idx]);
+return (ptr);
 }
 idx++;
 }
 if (s[idx] == '\0')
 {
-return (s + idx);
+ptr = &(s[idx]);
+return (ptr);
 }
-return ('\0');
+return (ptr);
 }
