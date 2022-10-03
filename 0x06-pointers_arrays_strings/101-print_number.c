@@ -17,7 +17,7 @@ unum = num * -1;
 putchar('-');
 while (idx >= 0)
 {
-putchar((unum / power(10, idx)) + '0');
+_putchar((unum / power(10, idx)) + '0');
 unum = unum % power(10, idx);
 idx--;
 }
