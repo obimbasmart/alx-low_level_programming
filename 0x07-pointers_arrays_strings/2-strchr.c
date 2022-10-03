@@ -23,5 +23,4 @@ if (s[idx] == '\0')
 ptr = 0;
 return (ptr);
 }
-return (ptr);
 }
