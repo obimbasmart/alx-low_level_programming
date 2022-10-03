@@ -12,8 +12,15 @@ n_digit = getdigitLength(num);
 idx = n_digit - 1;
 if (num < 0)
 {
-num = num * -1;
-_putchar('-');
+unsigned int unum;
+unum = num * -1;
+putchar('-');
+while (idx >= 0)
+{
+putchar((unum / power(10, idx)) + '0');
+unum = unum % power(10, idx);
+idx--;
+}
 }
 while (idx >= 0)
 {
