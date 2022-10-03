@@ -19,7 +19,7 @@ return (ptr);
 }
 idx++;
 }
-if (s[idx] == '\0')
+if (s[idx] == c)
 {
 ptr = &(s[idx]);
 return (ptr);
