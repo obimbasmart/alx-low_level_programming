@@ -12,12 +12,19 @@ n_digit = getdigitLength(num);
 idx = n_digit - 1;
 if (num < 0)
 {
-num = num * -1;
-putchar('-');
+unsigned int unum;
+unum = num * -1;
+_putchar('-');
+while (idx >= 0)
+{
+_putchar((unum / power(10, idx)) + '0');
+unum = unum % power(10, idx);
+idx--;
+}
 }
 while (idx >= 0)
 {
-putchar((num / power(10, idx)) + '0');
+_putchar((num / power(10, idx)) + '0');
 num = num % power(10, idx);
 idx--;
 }
@@ -30,9 +37,12 @@ idx--;
  */
 int getdigitLength(int num)
 {
-int idx,  n_digit;
+int n_digit;
 n_digit = 0;
-idx = 0;
+if (num == 0)
+{
+return (1);
+}
 while (num != 0)
 {
 num = num / 10;
