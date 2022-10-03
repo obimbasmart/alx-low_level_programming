@@ -14,7 +14,7 @@ if (num < 0)
 {
 unsigned int unum;
 unum = num * -1;
-putchar('-');
+_putchar('-');
 while (idx >= 0)
 {
 _putchar((unum / power(10, idx)) + '0');
