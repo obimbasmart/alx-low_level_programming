@@ -6,7 +6,8 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-int idx, idxx, *ptr;
+int idx, idxx;
+char *ptr;
 idx = 0;
 ptr = 0;
 while (s[idx] != '\0')
