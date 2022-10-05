@@ -12,6 +12,11 @@ char *ptr;
 idx = 0;
 ptr = 0;
 is_substring = 0;
+if (needle[0] == '\0')
+{
+ptr = &haystack[0];
+return (ptr);
+}
 while (haystack[idx] != '\0')
 {
 idxx = 0;
