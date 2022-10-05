@@ -7,7 +7,8 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-int idx, idxx, is_substring, *ptr;
+int idx, idxx, is_substring;
+char *ptr;
 idx = 0;
 ptr = 0;
 is_substring = 0;
