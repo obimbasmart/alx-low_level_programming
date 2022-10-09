@@ -10,6 +10,10 @@ if (n == 1 || n == 0)
 {
 return (n);
 }
+if (n < 0)
+{
+return (-1);
+}
 return (_get_sqr_root(n, 1));
 }
 
