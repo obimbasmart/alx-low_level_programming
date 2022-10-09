@@ -22,6 +22,7 @@ return (_check_prime(n, 2));
  * _check_prime - returns 1 if the input integer
  * is a prime number, otherwise return 0
  * @n: the number
+ * @i: iterator for checking if number is prime
  * Return: int
  */
 int _check_prime(int n, int i)
