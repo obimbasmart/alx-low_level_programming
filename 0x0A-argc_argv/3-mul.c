@@ -13,7 +13,6 @@ int main(int argc, char *argv[])
 int sum, i;
 sum = 0;
 i = 1;
-char *check;
 if (argc == 1)
 {
 printf("%d\n", sum);
@@ -21,7 +20,6 @@ return (0);
 }
 while (i < argc)
 {
-check = argv[i];
 if (_isnumber(argv[i]))
 {
 sum += atoi(argv[i]);
