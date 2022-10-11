@@ -7,8 +7,9 @@
  * @argv: the command line argument vector
  * Return: int
  */
-int main(int argc)
+int main(int argc, char *argv[])
 {
+(void) argv;
 printf("%d\n", argc  - 1);
 return (0);
 }
