@@ -10,19 +10,19 @@
  */
 int main(int argc, char *argv[])
 {
-int sum, i;
-sum = 0;
+int mul, i;
+mul = 1;
 i = 1;
-if (argc == 1)
+if (argc < 3)
 {
-printf("%d\n", sum);
-return (0);
+printf("Error\n");
+return (1);
 }
-while (i < argc)
+while (i < 3)
 {
 if (_isnumber(argv[i]))
 {
-sum += atoi(argv[i]);
+mul *= atoi(argv[i]);
 }
 else
 {
@@ -31,7 +31,7 @@ return (0);
 }
 i++;
 }
-printf("%d\n", sum);
+printf("%d\n", mul);
 return (0);
 }
 
@@ -43,10 +43,16 @@ return (0);
 int _isnumber(char *s)
 {
 int i;
-for (i = 0; s[i]!= '\0'; i++)
+i = 0;
+if (s[0] == '-')
+{
+i = 1;
+}
+for (; s[i] != '\0'; i++)
 {
 if (isdigit(s[i]) == 0)
-return 0;
+return (0);
 }
-return 1;
+return (1);
 }
+
