@@ -21,6 +21,11 @@ return (1);
 while (i < 5)
 {
 num = atoi(argv[1]);
+if (num <= 0)
+{
+printf("%d\n", count);
+return (0);
+}
 if (num % arr[i] == 0)
 {
 printf("%d\n", num / arr[i]);
