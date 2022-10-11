@@ -59,4 +59,5 @@ return ((num / arr[start]) + get_coin(num % arr[start], arr, start + 1));
 }
 start++;
 }
+return (0);
 }
