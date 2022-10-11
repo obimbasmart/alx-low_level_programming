@@ -7,7 +7,7 @@
  * @argv: the command line argument vector
  * Return: int
  */
-int main(int argc, int *argv[])
+int main(int argc, char *argv[])
 {
 int count, i, num;
 int arr[5] = {25, 10, 5, 2, 1};
