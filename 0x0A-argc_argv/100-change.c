@@ -35,6 +35,7 @@ return (0);
 i++;
 }
 printf("%d", count);
+return (0);
 }
 
 /**
