@@ -12,7 +12,8 @@ int len_1, len_2, i, j;
 char *s1_s2;
 if (s1 == NULL && s2 == NULL)
 {
-s1_s2 = "\0";
+s1_s2 = malloc(1);
+s1_s2[0] = '\0';
 return (s1_s2);
 }
 else if (s1 == NULL)
