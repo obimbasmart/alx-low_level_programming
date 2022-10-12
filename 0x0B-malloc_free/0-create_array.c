@@ -1,3 +1,4 @@
+#include <stdlib.h>
 /**
  * create_array - create an array of chars
  * and initialize it with @c
