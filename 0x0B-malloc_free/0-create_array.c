@@ -15,11 +15,14 @@ if (size == 0)
 ptr = 0;
 return (ptr);
 }
-ptr = (char *)malloc(size * sizeof(char));
+ptr = malloc(size * sizeof(char));
+if (!p)
+{
 while (i < size)
 {
 ptr[i] = c;
 i++;
+}
 }
 return (ptr);
 }
