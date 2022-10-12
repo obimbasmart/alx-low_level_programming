@@ -21,11 +21,11 @@ while (str[len] != '\0')
 len++;
 }
 ptr = malloc((1 + len) * sizeof(char));
-if (!pt)
+if (!ptr)
 {
 return (NULL);
 }
-i = 0'
+i = 0;
 while (i < len)
 {
 ptr[i] = str[i];
