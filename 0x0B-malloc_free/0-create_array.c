@@ -18,11 +18,13 @@ return (ptr);
 ptr = malloc(size * sizeof(char));
 if (!p)
 {
+ptr = 0;
+return (ptr);
+}
 while (i < size)
 {
 ptr[i] = c;
 i++;
-}
 }
 return (ptr);
 }
