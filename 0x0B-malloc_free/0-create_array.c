@@ -15,7 +15,7 @@ if (size == 0)
 ptr = 0;
 return (ptr);
 }
-ptr = malloc(size * sizeof(char));
+ptr = (char)malloc(size * sizeof(char));
 while (i < size)
 {
 ptr[i] = c;
