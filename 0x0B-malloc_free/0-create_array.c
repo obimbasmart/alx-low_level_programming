@@ -16,7 +16,7 @@ ptr = 0;
 return (ptr);
 }
 ptr = malloc(size * sizeof(char));
-if (!p)
+if (!ptr)
 {
 ptr = 0;
 return (ptr);
