@@ -21,7 +21,7 @@ while (i < ac)
 len += strlen(av[i]);
 i++;
 }
-len += ac;
+len += ac + 1;
 str = malloc(sizeof(char) * len);
 i = 0;
 k = 0;
