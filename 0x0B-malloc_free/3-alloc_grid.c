@@ -24,6 +24,7 @@ while (h < height)
 arr[h] = malloc(width * sizeof(int *));
 if (arr[h] == NULL)
 {
+free(arr);
 return (NULL);
 }
 h++;
