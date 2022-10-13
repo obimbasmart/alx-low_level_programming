@@ -1,6 +1,6 @@
 #include <stdlib.h>
 /**
- * str_concat -  function that returns a pointer to a
+ * alloc_grid -  function that returns a pointer to a
  * 2 dimensional array of integers
  * @width: width of array
  * @height: height of array
@@ -13,7 +13,7 @@ if (width <= 0 || height <= 0)
 {
 return (NULL);
 }
-arr =  malloc(sizeof(int **) * height);
+arr =  malloc(sizeof(*arr) * height);
 if (arr == NULL)
 {
 return (NULL);
@@ -21,9 +21,15 @@ return (NULL);
 h = 0;
 while (h < height)
 {
-arr[h] = malloc(width * sizeof(int *));
+arr[h] = malloc(width * sizeof(**arr));
 if (arr[h] == NULL)
 {
+free(arr);
+while (h >= 0)
+{
+free(arr[h]);
+h--;
+}
 return (NULL);
 }
 h++;
