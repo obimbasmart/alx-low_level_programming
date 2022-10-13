@@ -13,7 +13,7 @@ if (width <= 0 || height <= 0)
 {
 return (NULL);
 }
-arr =  malloc(sizeof(int **) * height);
+arr =  malloc(sizeof(*arr) * height);
 if (arr == NULL)
 {
 return (NULL);
@@ -21,7 +21,7 @@ return (NULL);
 h = 0;
 while (h < height)
 {
-arr[h] = malloc(width * sizeof(int *));
+arr[h] = malloc(width * sizeof(**arr));
 if (arr == NULL)
 {
 free(arr);
