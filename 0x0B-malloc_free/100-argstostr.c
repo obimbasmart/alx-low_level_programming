@@ -14,7 +14,7 @@ if (ac < 2 || av == NULL)
 {
 return (NULL);
 }
-i = 1;
+i = 0;
 len = 0;
 while (i < ac)
 {
@@ -23,7 +23,7 @@ i++;
 }
 len += (ac - 1);
 str = malloc(sizeof(char) * len);
-i = 1;
+i = 0;
 k = 0;
 while (i < ac)
 {
