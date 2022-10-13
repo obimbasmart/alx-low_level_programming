@@ -25,6 +25,12 @@ arr[h] = malloc(width * sizeof(**arr));
 if (arr[h] == NULL)
 {
 free(arr);
+int i;
+i = 0;
+while (i <= h)
+{
+free(arr[i]);
+}
 return (NULL);
 }
 h++;
