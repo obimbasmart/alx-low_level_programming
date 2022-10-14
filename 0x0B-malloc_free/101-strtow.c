@@ -11,12 +11,12 @@ char **strtow(char *str)
 char **arr_str;
 char *sub_string;
 int h, w, w_len, i;
-int word_count = word_len(str) + 1;
+int word_count = word_len(str);
 if (word_count == 0 || str == NULL)
 {
 return (NULL);
 }
-arr_str = malloc(sizeof(*arr_str) * word_count);
+arr_str = malloc(sizeof(*arr_str) * word_count + 1);
 if (arr_str == NULL)
 {
 return (NULL);
