@@ -51,19 +51,21 @@ return (NULL);
 w = 0;
 if (str[i] != ' ')
 {
-while (w < w_len)
+while (w < w_len - 1)
 {
 arr_str[h][w] = sub_string[w];
 w++;
 }
+arr_str[h][w] = '\0';
 }
 else if (char_seen(str[h], str[h - 1]))
 {
-while (w < w_len)
+while (w < w_len - 1)
 {
 arr_str[h][w] = sub_string[w];
 w++;
 }
+arr_str[h][w] = '\0';
 }
 h++;
 }
@@ -121,7 +123,6 @@ while (i < len)
 substr[i] = str[i + start];
 i++;
 }
-substr[i] = '\0';
 return (substr);
 }
 
