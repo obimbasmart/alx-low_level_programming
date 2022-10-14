@@ -90,7 +90,7 @@ return (0);
  * @c: the character to check
  * Return: 0 or 1
  */
-char *count_chars(char *str, int start)
+int count_chars(char *str, int start)
 {
 int count;
 count = 0;
