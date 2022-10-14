@@ -12,7 +12,7 @@ char **arr_str;
 char *sub_string;
 int h, w, w_len, i;
 int word_count = word_len(str) + 1;
-if (word_count == 1 || str == NULL)
+if (word_count == 1 || str == NULL || str[0] == '\0')
 {
 return (NULL);
 }
