@@ -2,7 +2,7 @@
 #include <string.h>
 #include "main.h"
 /**
- * strtow -  function that splits a string into words
+ * strtow - function that splits a string into words
  * @str: the string to split
  * Return: pointer to an array of strings
  */
@@ -91,7 +91,7 @@ return (0);
 /**
  * count_chars -  function that tells if a character have been seen
  * @start: starting index
- * *str: the original string
+ * @str: the original string
  * Return: 0 or 1
  */
 int count_chars(char *str, int start)
