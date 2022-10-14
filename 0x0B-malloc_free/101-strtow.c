@@ -76,6 +76,7 @@ return (arr_str);
 /**
  * char_seen -  function that tells if a character have been seen
  * @c: the character to check
+ * @prev_char: the previous character b4 @c
  * Return: 0 or 1
  */
 int char_seen(char c, char prev_char)
@@ -89,7 +90,8 @@ return (0);
 
 /**
  * count_chars -  function that tells if a character have been seen
- * @c: the character to check
+ * @start: starting index
+ * *str: the original string
  * Return: 0 or 1
  */
 int count_chars(char *str, int start)
@@ -110,6 +112,7 @@ return (count + 1);
  * starting from an index
  * @str: the original string
  * @start: index to start
+ * @len: length of substring
  * Return: pointer to substring
  */
 char *get_substring(char *str, int start, int len)
