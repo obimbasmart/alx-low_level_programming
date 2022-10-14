@@ -113,8 +113,8 @@ return (count + 1);
 char *get_substring(char *str, int start, int len)
 {
 char *substr;
-substr = malloc(sizeof(char) * len);
 int i;
+substr = malloc(sizeof(char) * len);
 i = 0;
 while (i < len)
 {
