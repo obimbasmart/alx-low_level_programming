@@ -6,6 +6,6 @@ void free_grid(int **grid, int height);
 char *argstostr(int ac, char **av);
 char **strtow(char *str);
 int char_seen(char, char);
-int *count_chars(char *, int);
+int count_chars(char *, int);
 int word_len(char *);
 char *get_substring(char *, int, int);
