@@ -22,7 +22,7 @@ if (ptr == NULL)
 {
 new_ptr = malloc(new_size);
 free(ptr);
-return (new_ptr):
+return (new_ptr);
 }
 if (new_size > old_size)
 {
