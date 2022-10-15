@@ -21,8 +21,9 @@ return (NULL);
 i = 0;
 while (min <= max)
 {
-arr_ptr[i] = min;
+memset(arr_ptr, min, i + 1);
 min++;
+i++;
 }
 return (arr_ptr);
 }
