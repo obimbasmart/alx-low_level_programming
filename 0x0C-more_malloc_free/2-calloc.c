@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 /**
  * _calloc -  function allocates memory for an array of nmemb elements
  * of size bytes each and returns a pointer to the allocated memory.
@@ -17,6 +18,10 @@ ptr = malloc(nmemb * size);
 if (ptr == NULL)
 {
 return (NULL);
+}
+else
+{
+memset(ptr, 0, nmemb * size);
 }
 return (ptr);
 }
