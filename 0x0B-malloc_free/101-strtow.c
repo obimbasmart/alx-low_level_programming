@@ -2,7 +2,7 @@
 #include <string.h>
 #include "main.h"
 /**
- * strtow -  function that splits a string into words
+ * strtow - function that splits a string into words
  * @str: the string to split
  * Return: pointer to an array of strings
  */
@@ -12,7 +12,7 @@ char **arr_str;
 char *sub_string;
 int h, w, w_len, i;
 int word_count = word_len(str) + 1;
-if (word_count == 0 || str == NULL)
+if (word_count == 1 || str == NULL || str[0] == '\0')
 {
 return (NULL);
 }
@@ -51,19 +51,21 @@ return (NULL);
 w = 0;
 if (str[i] != ' ')
 {
-while (w < w_len)
+while (w < w_len - 1)
 {
 arr_str[h][w] = sub_string[w];
 w++;
 }
+arr_str[h][w] = '\0';
 }
 else if (char_seen(str[h], str[h - 1]))
 {
-while (w < w_len)
+while (w < w_len - 1)
 {
 arr_str[h][w] = sub_string[w];
 w++;
 }
+arr_str[h][w] = '\0';
 }
 h++;
 }
@@ -74,6 +76,7 @@ return (arr_str);
 /**
  * char_seen -  function that tells if a character have been seen
  * @c: the character to check
+ * @prev_char: the previous character b4 @c
  * Return: 0 or 1
  */
 int char_seen(char c, char prev_char)
@@ -87,10 +90,11 @@ return (0);
 
 /**
  * count_chars -  function that tells if a character have been seen
- * @c: the character to check
+ * @start: starting index
+ * @str: the original string
  * Return: 0 or 1
  */
-char *count_chars(char *str, int start)
+int count_chars(char *str, int start)
 {
 int count;
 count = 0;
@@ -108,20 +112,20 @@ return (count + 1);
  * starting from an index
  * @str: the original string
  * @start: index to start
+ * @len: length of substring
  * Return: pointer to substring
  */
 char *get_substring(char *str, int start, int len)
 {
 char *substr;
-substr = malloc(sizeof(char) * len);
 int i;
+substr = malloc(sizeof(char) * len);
 i = 0;
 while (i < len)
 {
 substr[i] = str[i + start];
 i++;
 }
-substr[i] = '\0';
 return (substr);
 }
 
