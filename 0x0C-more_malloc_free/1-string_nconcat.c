@@ -24,7 +24,7 @@ if (n < len2)
 {
 len2 = n;
 }
-s1_s2 = malloc(sizeof((*s1_s2) *(len1 + len2)) + 1);
+s1_s2 = malloc(sizeof(char) * (len1 + len2 + 1));
 if (s1_s2 == NULL)
 {
 return (NULL);
