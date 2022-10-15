@@ -31,6 +31,7 @@ if (new_size > old_size)
 new_ptr = realloc(ptr, new_size);
 if (new_ptr == NULL)
 {
+free(ptr);
 return (NULL);
 }
 i = 0;
