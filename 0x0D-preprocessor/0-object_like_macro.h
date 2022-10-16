@@ -3,5 +3,5 @@
 
 #define SIZE 1024
 
-#endif // end of object_like_macro_H
+#endif /* end of object_like_macro_H */
 
