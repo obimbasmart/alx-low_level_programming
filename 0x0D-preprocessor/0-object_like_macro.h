@@ -1,7 +1,7 @@
-#ifndef 0-object_like_macro_H
-#define 0-object_like_macro_H
+#ifndef object_like_macro_H
+#define object_like_macro_H
 
 #define SIZE 1024
 
-#endif // end of 0-object_like_macro_H
+#endif // end of object_like_macro_H
 
