@@ -7,12 +7,12 @@
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-unsigned int idx;
-idx = 0;
-while (idx < n)
-{
-*(s + idx) = b;
-idx++;
-}
-return (s);
+    unsigned int idx;
+    idx = 0;
+    while (idx < n)
+    {
+        *(s + idx) = b;
+        idx++;
+    }
+    return (s);
 }

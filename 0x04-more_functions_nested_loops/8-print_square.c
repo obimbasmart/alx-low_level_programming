@@ -6,18 +6,18 @@
  */
 void print_square(int size)
 {
-int l, w;
-for (w = 0; w < size; w++)
-{
-for (l = 0; l < size; l++)
-{
-putchar('#');
-}
-if (w == (size - 1))
-{
-break;
-}
-putchar('\n');
-}
-putchar('\n');
+    int l, w;
+    for (w = 0; w < size; w++)
+    {
+        for (l = 0; l < size; l++)
+        {
+            putchar('#');
+        }
+        if (w == (size - 1))
+        {
+            break;
+        }
+        putchar('\n');
+    }
+    putchar('\n');
 }

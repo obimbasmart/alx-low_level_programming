@@ -5,13 +5,13 @@
  */
 unsigned int _strlen_recursion(char *s)
 {
-unsigned int idx;
-idx = 0;
-if (s[idx] ==  '\0')
-{
-return (0);
-}
-return (1 + _strlen_recursion(&s[idx + 1]));
+    unsigned int idx;
+    idx = 0;
+    if (s[idx] ==  '\0')
+    {
+        return (0);
+    }
+    return (1 + _strlen_recursion(&s[idx + 1]));
 }
 
 

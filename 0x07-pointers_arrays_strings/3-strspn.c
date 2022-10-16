@@ -6,27 +6,27 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-int idx, idxx;
-unsigned int counter;
-idx = 0;
-counter = 0;
-while (s[idx] != '\0')
-{
-idxx = 0;
-while (accept[idxx] != '\0')
-{
-if (s[idx] == accept[idxx])
-{
-counter++;
-break;
-}
-idxx++;
-}
-if (accept[idxx] == '\0')
-{
-return (counter);
-}
-idx++;
-}
-return (counter);
+    int idx, idxx;
+    unsigned int counter;
+    idx = 0;
+    counter = 0;
+    while (s[idx] != '\0')
+    {
+        idxx = 0;
+        while (accept[idxx] != '\0')
+        {
+            if (s[idx] == accept[idxx])
+            {
+                counter++;
+                break;
+            }
+            idxx++;
+        }
+        if (accept[idxx] == '\0')
+        {
+            return (counter);
+        }
+        idx++;
+    }
+    return (counter);
 }

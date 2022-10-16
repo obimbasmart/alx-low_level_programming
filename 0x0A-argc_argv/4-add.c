@@ -10,29 +10,29 @@
  */
 int main(int argc, char *argv[])
 {
-int i, sum;
-sum = 0;
-i = 1;
-if (argc < 2)
-{
-printf("%d\n", sum);
-return (0);
-}
-while (i < argc)
-{
-if (_isnumber(argv[i]))
-{
-sum += atoi(argv[i]);
-}
-else
-{
-printf("Error\n");
-return (0);
-}
-i++;
-}
-printf("%d\n", sum);
-return (0);
+    int i, sum;
+    sum = 0;
+    i = 1;
+    if (argc < 2)
+    {
+        printf("%d\n", sum);
+        return (0);
+    }
+    while (i < argc)
+    {
+        if (_isnumber(argv[i]))
+        {
+            sum += atoi(argv[i]);
+        }
+        else
+        {
+            printf("Error\n");
+            return (0);
+        }
+        i++;
+    }
+    printf("%d\n", sum);
+    return (0);
 }
 
 /**
@@ -42,16 +42,16 @@ return (0);
  */
 int _isnumber(char *s)
 {
-int i;
-i = 0;
-if (s[0] == '-')
-{
-i = 1;
-}
-for (; s[i] != '\0'; i++)
-{
-if (isdigit(s[i]) == 0)
-return (0);
-}
-return (1);
+    int i;
+    i = 0;
+    if (s[0] == '-')
+    {
+        i = 1;
+    }
+    for (; s[i] != '\0'; i++)
+    {
+        if (isdigit(s[i]) == 0)
+            return (0);
+    }
+    return (1);
 }

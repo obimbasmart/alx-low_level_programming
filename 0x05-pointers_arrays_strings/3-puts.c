@@ -6,12 +6,12 @@
  */
 void _puts(char *str)
 {
-unsigned int index_count;
-index_count = 0;
-while (str[index_count] != '\0')
-{
-putchar(str[index_count]);
-index_count++;
-}
-putchar('\n');
+    unsigned int index_count;
+    index_count = 0;
+    while (str[index_count] != '\0')
+    {
+        putchar(str[index_count]);
+        index_count++;
+    }
+    putchar('\n');
 }

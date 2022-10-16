@@ -6,23 +6,23 @@
  */
 char *_strchr(char *s, char c)
 {
-char *ptr;
-unsigned int idx;
-ptr = 0;
-idx = 0;
-while (s[idx] != '\0')
-{
-if (s[idx] == c)
-{
-ptr = &(s[idx]);
-return (ptr);
-}
-idx++;
-}
-if (s[idx] == c)
-{
-ptr = &(s[idx]);
-return (ptr);
-}
-return (ptr);
+    char *ptr;
+    unsigned int idx;
+    ptr = 0;
+    idx = 0;
+    while (s[idx] != '\0')
+    {
+        if (s[idx] == c)
+        {
+            ptr = &(s[idx]);
+            return (ptr);
+        }
+        idx++;
+    }
+    if (s[idx] == c)
+    {
+        ptr = &(s[idx]);
+        return (ptr);
+    }
+    return (ptr);
 }

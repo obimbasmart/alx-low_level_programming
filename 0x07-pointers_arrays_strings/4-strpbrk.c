@@ -6,26 +6,26 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-int idx, idxx;
-char *ptr;
-idx = 0;
-ptr = 0;
-while (s[idx] != '\0')
+    int idx, idxx;
+    char *ptr;
+    idx = 0;
+    ptr = 0;
+    while (s[idx] != '\0')
 
-{
-idxx = 0;
-while (accept[idxx] != '\0')
-{
-if (s[idx] == accept[idxx])
-{
-ptr = &s[idx];
-return (ptr);
-}
-idxx++;
-}
-idx++;
-}
-return (ptr);
+    {
+        idxx = 0;
+        while (accept[idxx] != '\0')
+        {
+            if (s[idx] == accept[idxx])
+            {
+                ptr = &s[idx];
+                return (ptr);
+            }
+            idxx++;
+        }
+        idx++;
+    }
+    return (ptr);
 }
 
 

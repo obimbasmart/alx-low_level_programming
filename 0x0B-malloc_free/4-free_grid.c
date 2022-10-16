@@ -8,12 +8,12 @@
  */
 void free_grid(int **grid, int height)
 {
-int h;
-h = 0;
-free(grid);
-while (h < height)
-{
-free(grid[h]);
-h++;
-}
+    int h;
+    h = 0;
+    free(grid);
+    while (h < height)
+    {
+        free(grid[h]);
+        h++;
+    }
 }

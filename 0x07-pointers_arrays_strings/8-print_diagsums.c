@@ -8,15 +8,15 @@
  */
 void print_diagsums(int *a, int size)
 {
-int idx, sumx, sumy;
-idx = 0;
-sumx = 0;
-sumy = 0;
-while (idx < size)
-{
-sumx += a[(idx *size) + idx];
-sumy += a[(idx + 1) * (size - 1)];
-idx++;
-}
-printf("%d, %d\n", sumx, sumy);
+    int idx, sumx, sumy;
+    idx = 0;
+    sumx = 0;
+    sumy = 0;
+    while (idx < size)
+    {
+        sumx += a[(idx *size) + idx];
+        sumy += a[(idx + 1) * (size - 1)];
+        idx++;
+    }
+    printf("%d, %d\n", sumx, sumy);
 }

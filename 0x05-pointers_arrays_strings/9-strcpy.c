@@ -7,15 +7,15 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-unsigned int idx;
-idx = 0;
-while (src[idx] != '\0')
-{
-dest[idx] = src[idx];
-idx++;
-}
-dest[idx] = '\0';
-return (dest);
+    unsigned int idx;
+    idx = 0;
+    while (src[idx] != '\0')
+    {
+        dest[idx] = src[idx];
+        idx++;
+    }
+    dest[idx] = '\0';
+    return (dest);
 }
 
 

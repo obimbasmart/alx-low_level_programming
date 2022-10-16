@@ -7,18 +7,18 @@
  */
 void print_array(int *str, int n)
 {
-int idx;
-idx = 0;
-while (idx < n)
-{
-printf("%d", str[idx]);
-if (idx != (n - 1))
-{
-putchar(',');
-putchar(' ');
-}
-idx++;
-}
-putchar('\n');
+    int idx;
+    idx = 0;
+    while (idx < n)
+    {
+        printf("%d", str[idx]);
+        if (idx != (n - 1))
+        {
+            putchar(',');
+            putchar(' ');
+        }
+        idx++;
+    }
+    putchar('\n');
 }
 

@@ -5,11 +5,11 @@
  */
 int _strlen(char *str)
 {
-unsigned int index_count;
-index_count = 0;
-while (str[index_count] != '\0')
-{
-index_count++;
-}
-return (index_count);
+    unsigned int index_count;
+    index_count = 0;
+    while (str[index_count] != '\0')
+    {
+        index_count++;
+    }
+    return (index_count);
 }

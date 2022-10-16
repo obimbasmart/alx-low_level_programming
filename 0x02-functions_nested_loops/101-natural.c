@@ -7,19 +7,19 @@
 */
 int main(void)
 {
-int i, sum;
-sum = 0;
-i = 0;
-while (i < 1024)
-{
-if (_ismultiple(i))
-{
-sum += i;
-}
-i++;
-}
-printf("%d\n", sum);
-return (0);
+    int i, sum;
+    sum = 0;
+    i = 0;
+    while (i < 1024)
+    {
+        if (_ismultiple(i))
+        {
+            sum += i;
+        }
+        i++;
+    }
+    printf("%d\n", sum);
+    return (0);
 }
 /**
 * _ismultiple - check if a number is a multiple of 3 or 5
@@ -28,9 +28,9 @@ return (0);
 */
 int _ismultiple(int n)
 {
-if (n % 3 == 0 || n % 5 == 0)
-{
-return (1);
-}
-return (0);
+    if (n % 3 == 0 || n % 5 == 0)
+    {
+        return (1);
+    }
+    return (0);
 }

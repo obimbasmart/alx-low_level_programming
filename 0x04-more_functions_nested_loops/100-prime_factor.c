@@ -4,12 +4,12 @@ int main(void)
 
 /**
  * main - print the largest prime factor of a num
- * @num : the number 
+ * @num : the number
  * Return: 0
  */
 {
-printf("%lu\n", get_highest_prime_factor(612852475143));
-return (0);
+    printf("%lu\n", get_highest_prime_factor(612852475143));
+    return (0);
 }
 
 /**
@@ -19,18 +19,18 @@ return (0);
  */
 unsigned long int get_highest_prime_factor(unsigned long int num)
 {
-unsigned long int highest_prime_factor;
-unsigned long int n;
-n = 1;
-while (n < num)
-{
-if (num % n == 0 && _isprime(n))
-{
-highest_prime_factor = n;
-}
-n++;
-}
-return (highest_prime_factor);
+    unsigned long int highest_prime_factor;
+    unsigned long int n;
+    n = 1;
+    while (n < num)
+    {
+        if (num % n == 0 && _isprime(n))
+        {
+            highest_prime_factor = n;
+        }
+        n++;
+    }
+    return (highest_prime_factor);
 }
 
 /**
@@ -40,16 +40,16 @@ return (highest_prime_factor);
  */
 int _isprime(unsigned long int num)
 {
-unsigned long int factorCount;
-unsigned long int n;
-factorCount = 2, n = 2;
-while (n < num)
-{
-if (num % n == 0)
-{
-factorCount++;
-}
-n++;
-}
-return (factorCount == 2);
+    unsigned long int factorCount;
+    unsigned long int n;
+    factorCount = 2, n = 2;
+    while (n < num)
+    {
+        if (num % n == 0)
+        {
+            factorCount++;
+        }
+        n++;
+    }
+    return (factorCount == 2);
 }

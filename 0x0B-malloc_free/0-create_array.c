@@ -8,25 +8,25 @@
  */
 char *create_array(unsigned int size, char c)
 {
-char *ptr;
-unsigned int i = 0;
-if (size == 0)
-{
-ptr = 0;
-return (ptr);
-}
-ptr = malloc(size * sizeof(char));
-if (!ptr)
-{
-ptr = 0;
-return (ptr);
-}
-while (i < size)
-{
-ptr[i] = c;
-i++;
-}
-return (ptr);
+    char *ptr;
+    unsigned int i = 0;
+    if (size == 0)
+    {
+        ptr = 0;
+        return (ptr);
+    }
+    ptr = malloc(size * sizeof(char));
+    if (!ptr)
+    {
+        ptr = 0;
+        return (ptr);
+    }
+    while (i < size)
+    {
+        ptr[i] = c;
+        i++;
+    }
+    return (ptr);
 }
 
 

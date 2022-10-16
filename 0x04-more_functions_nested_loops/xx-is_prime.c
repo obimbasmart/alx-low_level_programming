@@ -6,16 +6,16 @@
  */
 int _isprime(unsigned long int num)
 {
-unsigned long int factorCount;
-unsigned long int n;
-factorCount = 2, n = 2;
-while (n < num)
-{
-if (num % n == 0)
-{
-factorCount++;
-}
-n++;
-}
-return (factorCount == 2);
+    unsigned long int factorCount;
+    unsigned long int n;
+    factorCount = 2, n = 2;
+    while (n < num)
+    {
+        if (num % n == 0)
+        {
+            factorCount++;
+        }
+        n++;
+    }
+    return (factorCount == 2);
 }
