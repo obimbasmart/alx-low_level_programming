@@ -41,6 +41,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	new_dog_->owner = dup_owner;
 
 	/*free up memory */
+	free(dup_name);
+	free(dup_owner);
 	return (new_dog_);
 }
 
