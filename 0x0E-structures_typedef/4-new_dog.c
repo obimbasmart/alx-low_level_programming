@@ -28,7 +28,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		free(dup_name);
 		free(dup_owner);
-		free(new_dog_);
 		return (NULL);
 	}
 	/*copy the arguments into the newly created memory */
