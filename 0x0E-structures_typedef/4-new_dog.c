@@ -22,8 +22,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 
 	/* allocate size in memory for a copy of each string */
-	dup_name = malloc(sizeof(*name) * strlen(name));
-	dup_owner = malloc(sizeof(*owner) * strlen(owner));
+	dup_name = malloc(sizeof(*name) * (strlen(name) + 1));
+	dup_owner = malloc(sizeof(*owner) * (strlen(owner) + 1));
 	if (dup_name == NULL || dup_owner == NULL)
 	{
 		free(dup_name);
