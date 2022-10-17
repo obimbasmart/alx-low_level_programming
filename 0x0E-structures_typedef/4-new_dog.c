@@ -11,15 +11,22 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	struct dog *new_dog_;
+	char *dup_name;
+	char *dup_owner;
+
+	dup_name = malloc(sizeof(*name));
+	dup_owner = malloc(sizeof(*owner));
+	dup_name = name;
+	dup_owner  = owner;
 
 	new_dog_ = malloc(sizeof(struct dog));
 	if (new_dog_ == NULL)
 	{
 		return (NULL);
 	}
-	new_dog_->name = name;
+	new_dog_->name = dup_name;
 	new_dog_->age = age;
-	new_dog_->owner = owner;
+	new_dog_->owner = dup_owner;
 	return (new_dog_);
 }
 
