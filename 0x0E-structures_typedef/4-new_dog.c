@@ -1,4 +1,5 @@
 #include "dog.h"
+#include <string.h>
 #include <stdlib.h>
 
 /**
@@ -14,10 +15,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *dup_name;
 	char *dup_owner;
 
-	dup_name = malloc(sizeof(*name));
-	dup_owner = malloc(sizeof(*owner));
-	dup_name = name;
-	dup_owner  = owner;
+	dup_name = malloc(sizeof(*name) * strlen(name));
+	dup_owner = malloc(sizeof(*owner) * strlen(owner));
+	strcpy(dup_name, name);
+	strcpy(dup_owner, owner);
 
 	new_dog_ = malloc(sizeof(struct dog));
 	if (new_dog_ == NULL)
