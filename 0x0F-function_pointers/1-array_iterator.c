@@ -12,7 +12,7 @@
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	int i;
+	unsigned int i;
 
 	/* check if function pointer is NULL */
 	if (action == NULL)
