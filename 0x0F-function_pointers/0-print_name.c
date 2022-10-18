@@ -8,7 +8,12 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	/* pass @name to the function f() */
-	f(name);
+	/* if f is not NULL) */
+	if (f != NULL)
+	{
+
+		/* pass @name to the function f() */
+		f(name);
+	}
 }
 
