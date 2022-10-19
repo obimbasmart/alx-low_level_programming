@@ -4,7 +4,7 @@
 
 /**
  * main - driver programm for calc
- * @argc - the argument count passed to programm
+ * @argc: the argument count passed to programm
  * @argv: array containing arguments passed
  *
  * Return: 0 always
