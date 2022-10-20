@@ -25,11 +25,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			printf("%d", va_arg(numbers, int));
 			if (i < (n - 1))
 			{
-				_putchar(separator);
+				printf("%c", separator);
 			}
 			i++;
 		}
 	}
 	va_end(numbers);
-	_putchar('\n');
+	putchar('\n');
 }
