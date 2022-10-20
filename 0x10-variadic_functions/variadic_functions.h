@@ -3,7 +3,7 @@
 
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
-void _putchar(char);
+int _putchar(int);
 
-sendis /* end of variadic_functions_h */
+#endif /* end of variadic_functions_h */
 
