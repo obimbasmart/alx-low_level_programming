@@ -39,7 +39,6 @@ void print_all(const char * const format, ...)
 				break;
 			default:
 				sep = "";
-				break;
 		}
 		i++;
 		if (format[i] != '\0')
