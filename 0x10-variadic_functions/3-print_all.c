@@ -1,21 +1,21 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 #include <stdarg.h>
-
 /**
  * print_all - function that prints anything
  * @format: the string formats to use
- *
  * Return: nothing
  */
 void print_all(const char * const format, ...)
 {
-	/* initialize vars */
 	va_list str_list;
 	int i;
-	char *next_str;
-	char *sep;
+	char *next_str, *sep;
 
+	if (format == NULL)
+	{
+		return;
+	}
 	va_start(str_list, format);
 	i = 0;
 	while (format[i] != '\0')
@@ -49,7 +49,3 @@ void print_all(const char * const format, ...)
 	va_end(str_list);
 	printf("\n");
 }
-
-
-
-
