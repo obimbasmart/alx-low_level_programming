@@ -5,6 +5,7 @@
 /**
  * add_node_end - add a node at the end of a Linked list
  * @str: the string for the new node
+ * @head: the head of the linked list
  *
  * Return: pointer to the new node added
  */
