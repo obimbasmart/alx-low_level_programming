@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * free_list - function frees a LL from mememory
+ * free_listint - function frees a LL from mememory
  * @head: head to LL
  * Return: nothing
  */
