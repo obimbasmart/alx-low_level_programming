@@ -37,6 +37,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 size_t listint_len(const listint_t *h)
 {
 	unsigned int n_nodes;
+
 	n_nodes = 0;
 	if (h == NULL)
 	{
