@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * free_listint - function frees a LL from mememory
+ * free_listint2 - function frees a LL from mememory
  * @head: head to LL
  * Return: nothing
  */
@@ -20,6 +20,7 @@ void free_listint2(listint_t **head)
 	}
 	free_listint2(&(*head)->next);
 	free(*head);
+	*head = NULL;
 
 
 }
