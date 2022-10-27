@@ -9,9 +9,16 @@
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	unsigned int counter;
+	unsigned int counter, n_nodes;
 
+	n_nodes = listint_len(head);
 	counter = 0;
+
+	if (index >= n_nodes)
+	{
+		return (NULL);
+	}
+
 	while (counter < index)
 	{
 		head = head->next;
