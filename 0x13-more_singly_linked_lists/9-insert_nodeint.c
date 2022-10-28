@@ -19,18 +19,21 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	/* create new node */
 	new_node = malloc(sizeof(listint_t));
-	if (new_node == NULL || idx >= node_len)
+	if (new_node == NULL || idx > node_len || idx < 0)
 	{
 		return (NULL);
 	}
-	new_node->n = n;
-
-	idx--;
+	/* if the linked list is empty */
+	if (back_node == NULL && idx == 0)
+	{
+		return (add_nodeint(head, n));
+	}
 	while (idx != 0)
 	{
 		back_node = back_node->next;
 		idx--;
 	}
+	new_node->n = back_node->n;
 	new_node->next = back_node->next;
 	back_node->next = new_node;
 
@@ -62,4 +65,29 @@ size_t listint_len(const listint_t *h)
 		} while (h != NULL);
 	}
 	return (n_nodes);
+}
+
+/**
+ * add_nodeint - function that adds a new node
+ * at the beginning of a list_t list
+ * @head: pointer to first element of LL
+ * @n: starting point of linked list
+ *
+ * Return: the address of the new node
+ */
+listint_t *add_nodeint(listint_t **head, const int n)
+{
+	listint_t *new_node;
+
+	new_node = malloc(sizeof(listint_t));
+	if (new_node == NULL)
+	{
+		return (NULL);
+	}
+
+	new_node->n = n;
+	new_node->next = *head;
+	*head = new_node;
+
+	return (new_node);
 }
