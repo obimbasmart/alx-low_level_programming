@@ -12,7 +12,7 @@
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *back_node, *new_node;
-	int node_len;
+	unsigned int node_len;
 
 	node_len = listint_len(*head);
 	back_node = *head;
