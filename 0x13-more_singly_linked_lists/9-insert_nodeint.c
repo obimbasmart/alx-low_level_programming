@@ -24,7 +24,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (NULL);
 	}
 	/* if the linked list is empty */
-	if (back_node == NULL && idx == 0)
+	if (idx == 0)
 	{
 		return (add_nodeint(head, n));
 	}
