@@ -23,11 +23,17 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	{
 		return (NULL);
 	}
-	/* if the linked list is empty */
+	/* if insertion is for the begening of the node */
 	if (idx == 0)
 	{
 		return (add_nodeint(head, n));
 	}
+	/* if insertion is at the end of the node */
+	else if (idx == node_len)
+	{
+		return (add_nodeint_end(head, n));
+	}
+	
 	while (idx != 0)
 	{
 		back_node = back_node->next;
@@ -89,5 +95,42 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	new_node->next = *head;
 	*head = new_node;
 
+	return (new_node);
+}
+
+/**
+ * add_nodeint_end - add a node at the end of a Linked list
+ * @n: integer for new pointer
+ * @head: the head of the linked list
+ *
+ * Return: pointer to the new node added
+ */
+listint_t *add_nodeint_end(listint_t **head, const int n)
+{
+	listint_t *new_node;
+	listint_t *last_node;
+
+	new_node = malloc(sizeof(listint_t));
+	if (new_node == NULL)
+	{
+		return (NULL);
+	}
+
+	new_node->n = n;
+	new_node->next = NULL;
+
+	if (*head == NULL)
+	{
+		*head = new_node;
+		return (new_node);
+	}
+	/* get the last node of the list */
+	last_node = *head;
+	while (last_node->next != NULL)
+	{
+		last_node = last_node->next;
+	}
+
+	last_node->next = new_node;
 	return (new_node);
 }
