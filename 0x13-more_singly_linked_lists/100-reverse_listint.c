@@ -8,12 +8,13 @@
  */
 listint_t *reverse_listint(listint_t **head)
 {
+	listint_t *last_node = NULL;
 
 	if (*head == NULL || (*head)->next == NULL)
 	{
 		return (*head);
 	}
-	listint_t *last_node = reverse_listint(&(*head)->next);
+	last_node = reverse_listint(&(*head)->next);
 
 	(*head)->next->next = *head;
 	(*head)->next = NULL;
