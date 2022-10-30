@@ -35,5 +35,7 @@ int delete_last_node(listint_t **);
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
 
 listint_t *reverse_listint(listint_t **head);
-
+listint_t *find_junction(const listint_t *head);
+size_t print_cycle(listint_t *junction);
+size_t print_listint_safe(const listint_t *head);
 #endif /* end of lists_h */
