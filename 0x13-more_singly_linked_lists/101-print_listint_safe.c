@@ -35,7 +35,7 @@ size_t print_listint_safe(const listint_t *head)
 
 	else
 	{
-		print_listint(head);
+		list_len += print_listint(head);
 	}
 	return (list_len);
 }
