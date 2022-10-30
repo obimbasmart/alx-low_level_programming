@@ -25,7 +25,7 @@ size_t print_listint_safe(const listint_t *head)
 		{
 			while (head != junction)
 			{
-				printf("[%p] %d\n", head, head->n);
+				printf("[%p] %d\n", (listint_t *) head, head->n);
 				list_len += 1;
 				head = head->next;
 			}
@@ -88,7 +88,7 @@ size_t print_cycle(listint_t *junction)
 	cycle_len = 0;
 
 	do {
-		printf("[%p] %d\n", traverse, traverse->n);
+		printf("[%p] %d\n", (listint_t *)traverse, traverse->n);
 		cycle_len++;
 		traverse = traverse->next;
 	} while (traverse != junction);
@@ -116,7 +116,7 @@ size_t print_listint(const listint_t *h)
 	else
 	{
 		do {
-			printf("[%p] %d\n", h, h->n);
+			printf("[%p] %d\n", (listint_t *)h, h->n);
 			n_nodes++;
 			h = h->next;
 		} while (h != NULL);
