@@ -20,6 +20,7 @@ size_t print_listint_safe(const listint_t *head)
 		if (junction == head)
 		{
 			list_len += print_cycle(junction);
+			printf("[%p] %d\n", (void *) junction, junction->n);
 		}
 		else
 		{
@@ -30,6 +31,7 @@ size_t print_listint_safe(const listint_t *head)
 				head = head->next;
 			}
 			list_len += print_cycle(junction);
+			printf("-> [%p] %d\n", (void *) junction, junction->n);
 		}
 	}
 
