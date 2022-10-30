@@ -14,7 +14,7 @@ size_t print_listint_safe(const listint_t *head)
 	unsigned int list_len;
 
 	list_len = 0;
-	junction = find_junction(head);
+	junction = (listint_t *) find_junction(head);
 	if (junction)
 	{
 		if (junction == head)
@@ -49,7 +49,7 @@ listint_t *find_junction(const listint_t *head)
 {
 	listint_t *fastptr, *slowptr;
 
-	slowptr = fastptr = head;
+	slowptr = fastptr = (listint_t *) head;
 	/* find the point where both fastptr and slowptr meet */
 	while (fastptr && fastptr->next)
 	{
