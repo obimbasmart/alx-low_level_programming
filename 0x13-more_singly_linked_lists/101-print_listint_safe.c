@@ -61,7 +61,7 @@ listint_t *find_junction(const listint_t *head)
 		}
 		if (fastptr == slowptr)
 		{
-			slowptr = head;
+			slowptr = (listint_t *)head;
 			while (fastptr != slowptr)
 			{
 				slowptr = slowptr->next;
