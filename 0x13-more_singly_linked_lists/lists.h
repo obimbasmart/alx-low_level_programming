@@ -34,4 +34,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 int delete_last_node(listint_t **);
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
 
+listint_t *reverse_listint(listint_t **head);
+
 #endif /* end of lists_h */
