@@ -13,7 +13,7 @@ size_t free_listint_safe(listint_t **h)
 {
 	listint_t *junction, *temp;
 	unsigned int list_len;
-	
+
 	if (*h == NULL)
 	{
 		return (0);
