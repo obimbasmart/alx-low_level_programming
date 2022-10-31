@@ -73,6 +73,7 @@ size_t free_cycle(listint_t **junction)
 		traverse = temp;
 	} while (traverse != *junction);
 	*junction = NULL;
+	free(temp);
 	return (cycle_len);
 }
 
@@ -121,7 +122,7 @@ listint_t *_find_junction(const listint_t *head)
 size_t _free_listint2(listint_t **head)
 {
 
-	if (head == NULL)
+	if (*head == NULL)
 	{
 		return (0);
 	}
