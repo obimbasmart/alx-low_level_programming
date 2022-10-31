@@ -38,4 +38,10 @@ listint_t *reverse_listint(listint_t **head);
 listint_t *find_junction(const listint_t *head);
 size_t print_cycle(listint_t *junction);
 size_t print_listint_safe(const listint_t *head);
+
+size_t free_listint_safe(listint_t **h);
+size_t free_cycle(listint_t **junction);
+listint_t *_find_junction(const listint_t *head);
+
+size_t _free_listint2(listint_t **head);
 #endif /* end of lists_h */
