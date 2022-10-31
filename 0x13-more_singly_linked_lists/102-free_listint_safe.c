@@ -16,7 +16,7 @@ size_t free_listint_safe(listint_t **h)
 	
 	if (*h == NULL)
 	{
-		return (NULL);
+		return (0);
 	}
 	list_len = 0;
 	junction = (listint_t *) _find_junction(*h);
