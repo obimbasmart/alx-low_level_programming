@@ -73,7 +73,6 @@ size_t free_cycle(listint_t **junction)
 		traverse = temp;
 	} while (traverse != *junction);
 	*junction = NULL;
-	free(temp);
 	return (cycle_len);
 }
 
