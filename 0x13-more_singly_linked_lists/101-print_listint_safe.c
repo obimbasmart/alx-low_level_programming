@@ -11,7 +11,7 @@ size_t print_listint_safe(const listint_t *head)
 {
 	unsigned int len;
 	int diff;
-	
+
 	len = 0;
 	if (!head)
 	{
@@ -20,11 +20,16 @@ size_t print_listint_safe(const listint_t *head)
 	while (head)
 	{
 		printf("[%p] %d\n", (void *)head, head->n);
+		len++;
+		if (!head->next)
+		{
+			break;
+		}
+
 		diff = head - head->next;
-		len += 1;
 		if (diff <= 0)
 		{
-			
+
 			printf("-> [%p] %d\n", (void *)head->next, head->next->n);
 			break;
 		}
