@@ -23,7 +23,7 @@ size_t print_listint_safe(const listint_t *head)
 		len++;
 		diff = head - head->next;
 
-		if (diff > 0)
+		if (diff < 0)
 		{
 			head = head->next;
 		}
