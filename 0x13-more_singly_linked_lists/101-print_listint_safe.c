@@ -10,30 +10,38 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	unsigned int len;
-	long int diff;
+	int idx;
+	listint_t *temp_head, *temp_cons_head;
 
+	temp_head = temp_cons_head = (listint_t *) head;
 	len = 0;
+
 	if (head == NULL)
 	{
 		return (0);
 	}
+
+
 	while (head)
 	{
-		printf("[%p] %d\n", (void *)head, head->n);
 		len++;
-		diff = head - head->next;
+		idx = len;
 
-		if (diff < 0)
+		while (idx-- && head->next)
 		{
-			head = head->next;
+			if (temp_head == head->next)
+			{
+				printf("[%p] %d\n", (void *)head, head->n);
+				printf("-> [%p] %d\n", (void *)head->next, head->next->n);
+				return (len);
+			}
+			temp_head = temp_head->next;
 		}
-		else
-		{
 
-			printf("-> [%p] %d\n", (void *)head->next, head->next->n);
-			break;
-		}
-		/* head = head->next; */
+		temp_head = temp_cons_head;
+		printf("[%p] %d\n", (void *)head, head->n);
+		head = head->next;
 	}
+
 	return (len);
 }
