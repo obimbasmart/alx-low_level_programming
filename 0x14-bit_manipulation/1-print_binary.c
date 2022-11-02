@@ -9,16 +9,27 @@
  */
 void print_binary(unsigned long int n)
 {
-	if (n == 1)
+	int i, has_seen_a_1;
+	unsigned long int bit_position;
+
+	has_seen_a_1 = 0;
+	for (i = 31; i >= 0; i = i - 1)
 	{
-		printf("%d", 1);
-		return;
+		bit_position = (1 << i);
+		if ((n & bit_position) > 0)
+		{
+			has_seen_a_1 = 1;
+		}
+
+		if (has_seen_a_1)
+		{
+			putchar((n & bit_position) > 0 ? '1' : '0');
+		}
+
 	}
-	if (n == 0)
+	if (!has_seen_a_1)
 	{
-		printf("%d", 0);
-		return;
+		putchar('0');
 	}
-	print_binary(n / 2);
-	printf("%lu", n % 2);
+
 }
