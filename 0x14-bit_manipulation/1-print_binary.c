@@ -13,7 +13,7 @@ void print_binary(unsigned long int n)
 	unsigned long int bit_position;
 
 	has_seen_a_1 = 0;
-	for (i = 31; i >= 0; i = i - 1)
+	for (i = 63; i >= 32; i = i - 1)
 	{
 		bit_position = (1 << i);
 		if ((n & bit_position) > 0)
