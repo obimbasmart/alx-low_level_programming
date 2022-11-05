@@ -18,7 +18,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	}
 	/*open file on read and write mode */
-	file_desc = open(filename, O_RDWR | O_CREAT, 00600);
+	file_desc = open(filename, O_RDWR | O_CREAT | O_TRUNC, 00600);
 
 	if (file_desc < 0)
 	{
