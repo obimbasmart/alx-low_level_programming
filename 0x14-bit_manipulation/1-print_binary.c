@@ -10,20 +10,18 @@
 void print_binary(unsigned long int n)
 {
 	int i, has_seen_a_1;
-	unsigned long int bit_position;
 
 	has_seen_a_1 = 0;
-	for (i = 63; i >= 32; i = i - 1)
+	for (i = 63; i >= 0; i--)
 	{
-		bit_position = (1 << i);
-		if ((n & bit_position) > 0)
+		if ((n >> i) & 1UL)
 		{
 			has_seen_a_1 = 1;
 		}
 
 		if (has_seen_a_1)
 		{
-			putchar((n & bit_position) > 0 ? '1' : '0');
+			putchar((n >> i) & 1UL ? '1' : '0');
 		}
 
 	}
