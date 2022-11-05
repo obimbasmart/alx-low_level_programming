@@ -11,12 +11,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int file_desc;
 	int num_of_letters_read;
-	char buffer[letters];
+	char *buffer;
 
 	if (!filename)
 	{
 		return (0);
 	}
+
+	/* allocate buffer size using malloc */
+	buffer = malloc(sizeof(char) * letters);
 
 	/* open the file in read_only mode */
 	file_desc = open(filename,  O_RDONLY);
