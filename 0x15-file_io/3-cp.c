@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	file_to_desc = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 00664);
 	if (file_to_desc < 0)
 	{
-		dprintf(2, "Can't write to file %s\n", argv[2]);
+		dprintf(2, "Error: Can't write to file %s\n", argv[2]);
 		exit(99);
 	}
 	read_desc = read(file_from_desc, buffer, 1024);
@@ -46,12 +46,12 @@ int main(int argc, char *argv[])
 	free(buffer);
 	if (close_from_desc < 0)
 	{
-		dprintf(2, "Can't close fd %d\n", file_from_desc);
+		dprintf(2, "Error: Can't close fd %d\n", file_from_desc);
 		exit(100);
 	}
 	if (close_to_desc < 0)
 	{
-		dprintf(2, "Can't close fd %d\n", file_to_desc);
+		dprintf(2, "Error: Can't close fd %d\n", file_to_desc);
 		exit(100);
 	}
 	return (0);
