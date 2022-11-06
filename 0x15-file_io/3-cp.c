@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 	read_desc = read(file_from_desc, buffer, 1024);
 	while (read_desc)
 	{
-		write(file_to_desc, buffer, 1024);
+		write(file_to_desc, buffer, read_desc);
 		read_desc = read(file_from_desc, buffer, 1024);
 	}
 
