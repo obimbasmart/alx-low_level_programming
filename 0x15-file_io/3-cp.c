@@ -18,24 +18,24 @@ int main(int argc, char *argv[])
 	if (argc != 3)
 		print_to_stderr("Usage: cp file_from file_to", NULL, 97);
 
-	file_from = argv[1];
-	file_to = argv[2];
+	file_from_name = argv[1];
+	file_to_name = argv[2];
 	file_from_desc = open(file_from, O_RDONLY, BUFFER_SIZE);
 
 	if (file_from_desc < 0)
-		print_to_stderr("Error: Can't read from file", argv[1], 98);
+		print_to_stderr("Error: Can't read from file", file_from_name, 98);
 
 	buffer = malloc(sizeof(char) * BUFFER_SIZE);
 	file_to_desc = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 00664);
 
 	if (file_to_desc < 0)
-		print_to_stderr("Error: Can't write to", argv[2], 99);
+		print_to_stderr("Error: Can't write to", file_to_name, 99);
 
 	read_desc = read(file_from_desc, buffer, BUFFER_SIZE);
 	if (read_desc < 0)
-		print_to_stderr("Error: Can't read from file", argv[1], 98);
+		print_to_stderr("Error: Can't read from file", file_from_name, 98);
 
-	copy_content(file_from_desc, file_to_desc, read_desc, buffer, argv[2]);
+	copy_content(file_from_desc, file_to_desc, read_desc, buffer, file_to_name);
 
 	close_from_desc = close(file_from_desc);
 	close_to_desc = close(file_to_desc);
