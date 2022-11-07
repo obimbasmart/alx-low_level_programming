@@ -23,39 +23,34 @@ int main(int argc, char *argv[])
 	file_from = argv[1];
 	file_to = argv[2];
 	file_from_desc = open(file_from, O_RDONLY, BUFFER_SIZE);
+	
 	if (file_from_desc < 0)
 		print_to_stderr("Error: Can't read from file", argv[1], 98);
 	
 	buffer = malloc(sizeof(char) * BUFFER_SIZE);
 	file_to_desc = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 00664);
+	
 	if (file_to_desc < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
-	}
+		print_to_stderr("Error: Can't write to", argv[2], 99);
+	
 	read_desc = read(file_from_desc, buffer, BUFFER_SIZE);
 	if (read_desc < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
+		print_to_stderr("Error: Can't read from file", argv[1], 98);
+		
 	copy_content(file_from_desc, file_to_desc, read_desc, buffer, argv[2]);
+	
 	close_from_desc = close(file_from_desc);
 	close_to_desc = close(file_to_desc);
 	free(buffer);
+	
 	if (close_from_desc < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from_desc);
-		exit(100);
-	}
+		print_to_stderr("Error: Can't close", atoi(file_from_desc), 100);
+
 	if (close_to_desc < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to_desc);
-		exit(100);
-	}
+		print_to_stderr("Error: Can't close", atoi(file_to_desc), 100);
+	
 	return (0);
 }
-
 
 /**
  * copy_content - copy the content of file1 to file2
