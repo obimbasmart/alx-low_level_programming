@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 	read_desc = read(file_from_desc, buffer, BUFFER_SIZE);
 	if (read_desc < 0)
 	{
-		dprintf(2, "Can't read from %s\n", argv[1]);
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	while (read_desc)
