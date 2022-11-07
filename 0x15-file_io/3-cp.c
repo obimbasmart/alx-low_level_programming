@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
  *
  * Return: void - nothing
  */
-void copy_content(int file_from_desc, int file_to_desc, 
+void copy_content(int file_from_desc, int file_to_desc,
 		  int read_desc, char *buffer, char *file_to_name)
 {
 	ssize_t write_desc;
@@ -87,7 +87,8 @@ void copy_content(int file_from_desc, int file_to_desc,
  */
 void print_to_stderr(char *msg, char *file_name, unsigned int exit_code)
 {
-	file_name ? dprintf(STDERR_FILENO, "%s %s\n", msg, file_name) : dprintf(STDERR_FILENO, "%s\n", msg);
+	file_name ? dprintf(STDERR_FILENO, "%s %s\n", msg, file_name)
+		  : dprintf(STDERR_FILENO, "%s\n", msg);
 	exit(exit_code);
 }
 
