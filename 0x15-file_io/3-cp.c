@@ -25,8 +25,7 @@ int main(int argc, char *argv[])
 	file_from_desc = open(file_from, O_RDONLY, BUFFER_SIZE);
 	if (file_from_desc < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
+		print_to_stderr("Error: Can't read from file", argv[1], 98);
 	}
 	buffer = malloc(sizeof(char) * BUFFER_SIZE);
 	file_to_desc = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 00664);
@@ -63,7 +62,7 @@ int main(int argc, char *argv[])
  * copy_content - copy the content of file1 to file2
  * @file_to_desc: destination file file descriptor
  * @buffer: buffer for copying content
- * @read_desc
+ * @read_desc: return val from initial read on file_from
  *
  * Return: void - nothing
  */
@@ -81,4 +80,18 @@ void copy_content(int file_from_desc, int file_to_desc, int read_desc, char *buf
 		}
 		read_desc = read(file_from_desc, buffer, BUFFER_SIZE);
 	}
+}
+
+/**
+ * print_to_stderr - print formatted output to standard error
+ * @msg: error message
+ * @file_name: name of file
+ * @exit_code: exit status code
+ *
+ * Return: nothing
+ */
+void print_to_stderr(char *msg, char *file_name, unsigned int exit_code)
+{
+	dprintf(STDERR_FILENO, "%s %s\n", msg, file_to_name);
+	exit(exit_code);
 }
