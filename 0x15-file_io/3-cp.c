@@ -14,20 +14,20 @@ int main(int argc, char *argv[])
 	char *file_from, *file_to, *buffer;
 	ssize_t read_desc;
 	int file_from_desc, file_to_desc, close_from_desc, close_to_desc;
-
+	
 	if (argc != 3)
 		print_to_stderr("Usage: cp file_from file_to", "", 97);
-
+	
 	file_from = argv[1];
 	file_to = argv[2];
 	file_from_desc = open(file_from, O_RDONLY, BUFFER_SIZE);
-
+	
 	if (file_from_desc < 0)
 		print_to_stderr("Error: Can't read from file", argv[1], 98);
-
+	
 	buffer = malloc(sizeof(char) * BUFFER_SIZE);
 	file_to_desc = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 00664);
-
+	
 	if (file_to_desc < 0)
 		print_to_stderr("Error: Can't write to", argv[2], 99);
 
@@ -36,17 +36,17 @@ int main(int argc, char *argv[])
 		print_to_stderr("Error: Can't read from file", argv[1], 98);
 	
 	copy_content(file_from_desc, file_to_desc, read_desc, buffer, argv[2]);
-
+	
 	close_from_desc = close(file_from_desc);
 	close_to_desc = close(file_to_desc);
 	free(buffer);
-
+	
 	if (close_from_desc < 0)
 		print_to_stderr_int("Error: Can't close fd", file_from_desc, 100);
-
+	
 	if (close_to_desc < 0)
 		print_to_stderr_int("Error: Can't close fd", file_to_desc, 100);
-
+	
 	return (0);
 }
 
@@ -87,7 +87,7 @@ void copy_content(int file_from_desc, int file_to_desc,
  */
 void print_to_stderr(char *msg, char *file_name, unsigned int exit_code)
 {
-	dprintf(STDERR_FILENO, "%s %s\n", msg, file_name);
+	file_name ? dprintf(STDERR_FILENO, "%s %s\n", msg, file_name) : dprintf(STDERR_FILENO, "%s\n", msg)
 	exit(exit_code);
 }
 
