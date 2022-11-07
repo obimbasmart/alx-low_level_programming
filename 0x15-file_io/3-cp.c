@@ -24,9 +24,8 @@ int main(int argc, char *argv[])
 	file_to = argv[2];
 	file_from_desc = open(file_from, O_RDONLY, BUFFER_SIZE);
 	if (file_from_desc < 0)
-	{
 		print_to_stderr("Error: Can't read from file", argv[1], 98);
-	}
+	
 	buffer = malloc(sizeof(char) * BUFFER_SIZE);
 	file_to_desc = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 00664);
 	if (file_to_desc < 0)
