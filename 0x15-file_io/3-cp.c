@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
 	char *file_from, *file_to, *buffer;
-	ssize_t read_desc;
+	ssize_t read_desc, write_desc;
 	int file_from_desc, file_to_desc, close_from_desc, close_to_desc;
 
 	if (argc != 3)
@@ -22,23 +22,28 @@ int main(int argc, char *argv[])
 	}
 	file_from = argv[1];
 	file_to = argv[2];
-	file_from_desc = open(file_from, O_RDONLY, SIZE);
+	file_from_desc = open(file_from, O_RDONLY, BUFFER_SIZE);
 	if (file_from_desc < 0)
 	{
 		dprintf(2, "Can't read from %s\n", argv[1]);
 		exit(98);
 	}
-	buffer = malloc(sizeof(char) * SIZE);
+	buffer = malloc(sizeof(char) * BUFFER_SIZE);
 	file_to_desc = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 00664);
 	if (file_to_desc < 0)
 	{
 		dprintf(2, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	read_desc = read(file_from_desc, buffer, SIZE);
+	read_desc = read(file_from_desc, buffer, BUFFER_SIZE);
 	while (read_desc)
 	{
-		write(file_to_desc, buffer, read_desc);
+		write_desc = write(file_to_desc, buffer, read_desc);
+		if (write_desc < 0)
+		{
+			dprintf(2, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
 		read_desc = read(file_from_desc, buffer, SIZE);
 	}
 
