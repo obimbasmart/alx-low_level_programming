@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
 	char *file_from, *file_to, *buffer;
-	ssize_t read_desc, write_desc;
+	ssize_t read_desc;
 	int file_from_desc, file_to_desc, close_from_desc, close_to_desc;
 
 	if (argc != 3)
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	copy_content(file_from_desc, file_to_desc, read_desc, buffer);
+	copy_content(file_from_desc, file_to_desc, read_desc, buffer, argv[2]);
 	close_from_desc = close(file_from_desc);
 	close_to_desc = close(file_to_desc);
 	free(buffer);
@@ -67,9 +67,9 @@ int main(int argc, char *argv[])
  *
  * Return: void - nothing
  */
-void copy_content(int file_from_desc, int file_to_desc, int read_desc, char *buffer)
+void copy_content(int file_from_desc, int file_to_desc, int read_desc, char *buffer, char *file_to_name)
 {
-	int write_desc;
+	ssize_t write_desc;
 	
 	while (read_desc)
 	{
