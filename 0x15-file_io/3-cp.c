@@ -16,10 +16,8 @@ int main(int argc, char *argv[])
 	int file_from_desc, file_to_desc, close_from_desc, close_to_desc;
 
 	if (argc != 3)
-	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-	}
+		print_to_stderr("Usage: cp file_from file_to", NULL, 97);
+
 	file_from = argv[1];
 	file_to = argv[2];
 	file_from_desc = open(file_from, O_RDONLY, BUFFER_SIZE);
@@ -44,10 +42,10 @@ int main(int argc, char *argv[])
 	free(buffer);
 	
 	if (close_from_desc < 0)
-		print_to_stderr("Error: Can't close", atoi(file_from_desc), 100);
+		print_to_stderr_int("Error: Can't close fd", file_from_desc, 100);
 
 	if (close_to_desc < 0)
-		print_to_stderr("Error: Can't close", atoi(file_to_desc), 100);
+		print_to_stderr_int("Error: Can't close fd", file_to_desc, 100);
 	
 	return (0);
 }
@@ -87,5 +85,19 @@ void copy_content(int file_from_desc, int file_to_desc, int read_desc, char *buf
 void print_to_stderr(char *msg, char *file_name, unsigned int exit_code)
 {
 	dprintf(STDERR_FILENO, "%s %s\n", msg, file_name);
+	exit(exit_code);
+}
+
+/**
+ * print_to_stderr_int - print formatted output to standard error
+ * @msg: error message
+ * @fd: integer value of file descriptor
+ * @exit_code: exit status code
+ *
+ * Return: nothing
+ */
+void print_to_stderr_int(char *msg, int fd, unsigned int exit_code)
+{
+	dprintf(STDERR_FILENO, "%s %d\n", msg, fd);
 	exit(exit_code);
 }
