@@ -20,13 +20,13 @@ int main(int argc, char *argv[])
 
 	file_from_name = argv[1];
 	file_to_name = argv[2];
-	file_from_desc = open(file_from, O_RDONLY, BUFFER_SIZE);
+	file_from_desc = open(file_from_name, O_RDONLY, BUFFER_SIZE);
 
 	if (file_from_desc < 0)
 		print_to_stderr("Error: Can't read from file", file_from_name, 98);
 
 	buffer = malloc(sizeof(char) * BUFFER_SIZE);
-	file_to_desc = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 00664);
+	file_to_desc = open(file_to_name, O_WRONLY | O_CREAT | O_TRUNC, 00664);
 
 	if (file_to_desc < 0)
 		print_to_stderr("Error: Can't write to", file_to_name, 99);
