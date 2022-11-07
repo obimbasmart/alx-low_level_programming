@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 			dprintf(2, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
-		read_desc = read(file_from_desc, buffer, SIZE);
+		read_desc = read(file_from_desc, buffer, BUFFER_SIZE);
 	}
 
 	close_from_desc = close(file_from_desc);
