@@ -16,52 +16,55 @@ int main(int argc, char *argv[])
 	int file_from_desc, file_to_desc, close_from_desc, close_to_desc;
 
 	if (argc != 3)
-		print_to_stderr("Usage: cp file_from file_to", NULL, 97);
+		print_to_stderr("Usage: cp file_from file_to", "", 97);
 
 	file_from = argv[1];
 	file_to = argv[2];
 	file_from_desc = open(file_from, O_RDONLY, BUFFER_SIZE);
-	
+
 	if (file_from_desc < 0)
 		print_to_stderr("Error: Can't read from file", argv[1], 98);
-	
+
 	buffer = malloc(sizeof(char) * BUFFER_SIZE);
 	file_to_desc = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 00664);
-	
+
 	if (file_to_desc < 0)
 		print_to_stderr("Error: Can't write to", argv[2], 99);
-	
+
 	read_desc = read(file_from_desc, buffer, BUFFER_SIZE);
 	if (read_desc < 0)
 		print_to_stderr("Error: Can't read from file", argv[1], 98);
-		
-	copy_content(file_from_desc, file_to_desc, read_desc, buffer, argv[2]);
 	
+	copy_content(file_from_desc, file_to_desc, read_desc, buffer, argv[2]);
+
 	close_from_desc = close(file_from_desc);
 	close_to_desc = close(file_to_desc);
 	free(buffer);
-	
+
 	if (close_from_desc < 0)
 		print_to_stderr_int("Error: Can't close fd", file_from_desc, 100);
 
 	if (close_to_desc < 0)
 		print_to_stderr_int("Error: Can't close fd", file_to_desc, 100);
-	
+
 	return (0);
 }
 
 /**
  * copy_content - copy the content of file1 to file2
  * @file_to_desc: destination file file descriptor
+ * @file_from_desc: source file file descriptor
  * @buffer: buffer for copying content
+ * @file_to_name: name of source file
  * @read_desc: return val from initial read on file_from
  *
  * Return: void - nothing
  */
-void copy_content(int file_from_desc, int file_to_desc, int read_desc, char *buffer, char *file_to_name)
+void copy_content(int file_from_desc, int file_to_desc, 
+		  int read_desc, char *buffer, char *file_to_name)
 {
 	ssize_t write_desc;
-	
+
 	while (read_desc)
 	{
 		write_desc = write(file_to_desc, buffer, read_desc);
