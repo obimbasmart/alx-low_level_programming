@@ -55,6 +55,7 @@ int main(int argc, char *argv[])
 	close_from_desc = close(file_from_desc);
 	close_to_desc = close(file_to_desc);
 	free(buffer);
+	/*
 	if (close_from_desc < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from_desc);
@@ -65,5 +66,6 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to_desc);
 		exit(100);
 	}
+	*/
 	return (0);
 }
