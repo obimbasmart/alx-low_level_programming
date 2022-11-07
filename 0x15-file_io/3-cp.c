@@ -41,17 +41,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	while (read_desc)
-	{
-		write_desc = write(file_to_desc, buffer, read_desc);
-		if (write_desc < 0)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			exit(99);
-		}
-		read_desc = read(file_from_desc, buffer, BUFFER_SIZE);
-	}
-
+	copy_content(file_from_desc, file_to_desc, read_desc, buffer);
 	close_from_desc = close(file_from_desc);
 	close_to_desc = close(file_to_desc);
 	free(buffer);
@@ -66,4 +56,29 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	return (0);
+}
+
+
+/**
+ * copy_content - copy the content of file1 to file2
+ * @file_to_desc: destination file file descriptor
+ * @buffer: buffer for copying content
+ * @read_desc
+ *
+ * Return: void - nothing
+ */
+void copy_content(int file_from_desc, int file_to_desc, int read_desc, char *buffer)
+{
+	int write_desc;
+	
+	while (read_desc)
+	{
+		write_desc = write(file_to_desc, buffer, read_desc);
+		if (write_desc < 0)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
+		read_desc = read(file_from_desc, buffer, BUFFER_SIZE);
+	}
 }
