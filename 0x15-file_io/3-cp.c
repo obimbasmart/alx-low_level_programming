@@ -36,6 +36,11 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	read_desc = read(file_from_desc, buffer, BUFFER_SIZE);
+	if (read_desc < 0)
+	{
+		dprintf(2, "Can't read from %s\n", argv[1]);
+		exit(98);
+	}
 	while (read_desc)
 	{
 		write_desc = write(file_to_desc, buffer, read_desc);
