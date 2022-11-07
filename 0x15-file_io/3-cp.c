@@ -76,7 +76,7 @@ void copy_content(int file_from_desc, int file_to_desc, int read_desc, char *buf
 		write_desc = write(file_to_desc, buffer, read_desc);
 		if (write_desc < 0)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to_name);
 			exit(99);
 		}
 		read_desc = read(file_from_desc, buffer, BUFFER_SIZE);
