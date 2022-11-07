@@ -92,6 +92,6 @@ void copy_content(int file_from_desc, int file_to_desc, int read_desc, char *buf
  */
 void print_to_stderr(char *msg, char *file_name, unsigned int exit_code)
 {
-	dprintf(STDERR_FILENO, "%s %s\n", msg, file_to_name);
+	dprintf(STDERR_FILENO, "%s %s\n", msg, file_name);
 	exit(exit_code);
 }
