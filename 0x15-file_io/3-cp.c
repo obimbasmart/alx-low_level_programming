@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 {
 	char *file_from, *file_to, *buffer;
 	ssize_t read_desc, write_desc;
-	int file_from_desc, file_to_desc, close_from_desc, close_to_desc;
+	int file_from_desc, file_to_desc; /* close_from_desc, close_to_desc; */
 
 	if (argc != 3)
 	{
@@ -52,8 +52,8 @@ int main(int argc, char *argv[])
 		read_desc = read(file_from_desc, buffer, BUFFER_SIZE);
 	}
 
-	close_from_desc = close(file_from_desc);
-	close_to_desc = close(file_to_desc);
+	close(file_from_desc);
+	close(file_to_desc);
 	free(buffer);
 	/*
 	if (close_from_desc < 0)
