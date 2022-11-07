@@ -12,7 +12,8 @@
 int main(int argc, char *argv[])
 {
 	char *file_from, *file_to, *buffer;
-	int file_from_desc, file_to_desc, read_desc, close_from_desc, close_to_desc;
+	ssize_t read_desc;
+	int file_from_desc, file_to_desc, close_from_desc, close_to_desc;
 
 	if (argc != 3)
 	{
