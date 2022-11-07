@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	file_from_desc = open(file_from, O_RDONLY, BUFFER_SIZE);
 	if (file_from_desc < 0)
 	{
-		dprintf(STDERR_FILENO, "Can't read from %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	buffer = malloc(sizeof(char) * BUFFER_SIZE);
