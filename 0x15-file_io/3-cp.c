@@ -22,24 +22,24 @@ int main(int argc, char *argv[])
 	}
 	file_from = argv[1];
 	file_to = argv[2];
-	file_from_desc = open(file_from, O_RDONLY, 1024);
+	file_from_desc = open(file_from, O_RDONLY, SIZE);
 	if (file_from_desc < 0)
 	{
 		dprintf(2, "Can't read from %s\n", argv[1]);
 		exit(98);
 	}
-	buffer = malloc(sizeof(char) * 1024);
+	buffer = malloc(sizeof(char) * SIZE);
 	file_to_desc = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 00664);
 	if (file_to_desc < 0)
 	{
 		dprintf(2, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	read_desc = read(file_from_desc, buffer, 1024);
+	read_desc = read(file_from_desc, buffer, SIZE);
 	while (read_desc)
 	{
 		write(file_to_desc, buffer, read_desc);
-		read_desc = read(file_from_desc, buffer, 1024);
+		read_desc = read(file_from_desc, buffer, SIZE);
 	}
 
 	close_from_desc = close(file_from_desc);
