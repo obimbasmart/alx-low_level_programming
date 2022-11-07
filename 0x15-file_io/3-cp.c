@@ -11,7 +11,7 @@
  */
 int main(int argc, char *argv[])
 {
-	char *file_from, *file_to, *buffer;
+	char *file_from_name, *file_to_name, *buffer;
 	ssize_t read_desc;
 	int file_from_desc, file_to_desc, close_from_desc, close_to_desc;
 
