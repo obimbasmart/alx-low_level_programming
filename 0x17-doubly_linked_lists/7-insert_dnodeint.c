@@ -16,10 +16,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	node_len = dlistint_len(*h);
 	back_node = *h;
-
-	/* create new node */
-	new_node = malloc(sizeof(dlistint_t));
-	if (new_node == NULL || idx > node_len)
+	if (idx > node_len)
 	{
 		return (NULL);
 	}
@@ -33,6 +30,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	else if (idx == node_len)
 	{
 		return (add_dnodeint_end(h, n));
+	}
+	/* create new node */
+	new_node = malloc(sizeof(dlistint_t));
+	if (!new_node)
+	{
+		dprintf(STDERR_FILENO, "Error: malloc failed to allocate memory");
+		return (NULL);
 	}
 
 	idx--;
