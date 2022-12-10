@@ -15,7 +15,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	node_len = 0;
 
 	if (!(*head))
-		return (1);
+		return (-1);
 	/* get the length of the list */
 	while (_head_copy)
 	{
