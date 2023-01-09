@@ -10,18 +10,10 @@
 ## Mandatory
 
 0. <details><summary>Write a function that creates a hash table</summary>
-	- Prototype: hash_table_t *hash_table_create(unsigned long int size);
-	- where size is the size of the array
-	- Returns a pointer to the newly created hash table
-	- If something went wrong, your function should return NULL
-</details>
-
-1. <details><summary>CLICK ME</summary>
-<p>
-
-```python
-print("hello world!")
-```
-
-</p>
+	<ul>
+		<li>Prototype: hash_table_t <code>*hash_table_create(unsigned long int size);</code></li>
+		<li>where size is the size of the array</li>
+		<li>Returns a pointer to the newly created hash table</li>
+		<li>If something went wrong, your function should return NULL</li>
+	</ul>
 </details>
