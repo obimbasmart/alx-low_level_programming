@@ -24,3 +24,13 @@
 		<li>You are allowed to copy and paste the function from this page</li>
 	</ul>
 </details>
+
+2. <details><summary>Write a function that gives you the index of a key.</summary>
+	<ul>
+		<li>Prototype: <code>unsigned long int key_index(const unsigned char *key, unsigned long int size);</code>
+		<li>where <code>key</code> is the key</li>
+		<li>and size is the size of the array of the hash table</li>
+		<li>This function should use the hash_djb2 function that you wrote earlier</li>
+		<li>Returns the index at which the key/value pair should be stored in the array of the hash table</li>
+		<li>You will have to use this hash function for all the next tasks</li>
+	</ul>
