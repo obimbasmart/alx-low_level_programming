@@ -17,3 +17,10 @@
 		<li>If something went wrong, your function should return NULL</li>
 	</ul>
 </details>
+
+1. <details><summary>Write a hash function implementing the djb2 algorithm</summary>
+	<ul>
+		<li>Prototype: <code>unsigned long int hash_djb2(const unsigned char *str);</code></li>
+		<li>You are allowed to copy and paste the function from this page</li>
+	</ul>
+</details>
