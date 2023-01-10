@@ -13,8 +13,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *new_hash_node;
 	unsigned long int index;
 
-	/* key cannot be empty */
-	if (key[0] == '\0')
+	/* key cannot be empty and hash table cannot be NULL */
+	if (key[0] == '\0' || !ht)
 		return (EXIT_FAILURE);
 
 	/* create new element */
