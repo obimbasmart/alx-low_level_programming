@@ -10,7 +10,7 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *new_hash_node;
+	hash_node_t *new_hash_node, *current_hash_node;
 	unsigned long int index;
 
 	/* key cannot be empty and hash table cannot be NULL */
@@ -29,31 +29,38 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	/* get index */
 	index = key_index((unsigned char *)key, ht->size);
-	/* check for collision */
-	if (is_collision(ht, index))
-	{
-		/* add to the begening of list */
-		new_hash_node->next = ht->array[index];
-		ht->array[index] = new_hash_node;
-		return (EXIT_SUCCESS);
-	}
+	/* get current node */
+	current_hash_node = ht->array[index];
+	/* check if index is empty/NULL */
+	if (!current_hash_node)
+		ht->array[index] = new_hash_node; /* add item directory*/
 
-	ht->array[index] = new_hash_node;
+	/* if index is already occupied */
+	else
+	{
+		/* check if key is same as the current item */
+		if (strcmp(current_hash_node->key, key) == 0)
+			strcpy(ht->array[index]->value, value);	/* update the value */
+		/* for collision */
+		else
+			handle_collision(&ht, new_hash_node, index);
+	}
 	return (EXIT_SUCCESS);
 }
 
 /**
- * is_collision - function checks if a key collides with another
+ * handle_collision - function checks if a key collides with another
  * in a hash table
  * @ht: pointer to hash table
- * @key: key to check
+ * @index: collision index
+ * @new_node: new node item to be added to the list
  *
  * Return: 1 if it succeeded, 0 otherwise
  */
-int is_collision(hash_table_t *ht, unsigned long int index)
+void handle_collision(hash_table_t **ht, hash_node_t *new_node,
+						unsigned long int index)
 {
-	if (ht->array[index])
-		return (EXIT_SUCCESS);
-
-	return (EXIT_FAILURE);
+	new_node->next = (*ht)->array[index];
+	(*ht)->array[index] = new_node;
 }
+
