@@ -15,13 +15,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	/* key cannot be empty and hash table cannot be NULL */
 	if (key[0] == '\0' || !ht)
-		return (EXIT_FAILURE);
+		return (0);
 
 	/* create new element */
 	new_hash_node = malloc(sizeof(hash_node_t));
 	/*if malloc fails */
 	if (!new_hash_node)
-		return (EXIT_FAILURE);
+		return (0);
 
 	new_hash_node->key = (char *) key;
 	new_hash_node->value = strdup(value);
@@ -45,7 +45,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		else
 			handle_collision(&ht, new_hash_node, index);
 	}
-	return (EXIT_SUCCESS);
+	return (1);
 }
 
 /**
