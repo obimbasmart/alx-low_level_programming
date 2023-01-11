@@ -60,3 +60,29 @@
 <li>Returns the value associated with the element, or <code>NULL</code> if <code>key</code> couldn’t be found</li>
 </ul>
 	</details>
+
+5. <details><summary> Write a function that prints a hash table</summary>
+
+<ul>
+<li>Prototype: <code>void hash_table_print(const hash_table_t *ht);</code>
+
+<ul>
+<li>where <code>ht</code> is the hash table</li>
+</ul></li>
+<li>You should print the key/value in the order that they appear in the array of hash table
+
+<ul>
+<li>Order: array, list</li>
+</ul></li>
+<li>Format: <code>{'Name' : 'Obimba', 'Age' : 53}</li>
+<li>If <code>ht</code> is NULL, don’t print anything</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+
