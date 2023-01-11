@@ -79,10 +79,13 @@
 	</ul>
 	</details>
 
+6. <details><summary>Write a function that deletes a hash table.</summary>
 
+	<ul>
+	<li>Prototype: <code>void hash_table_delete(hash_table_t *ht);</code>
 
-
-
-
-
-
+	<ul>
+	<li>where <code>ht</code> is the hash table</li>
+	</ul></li>
+	</ul>
+	</details>

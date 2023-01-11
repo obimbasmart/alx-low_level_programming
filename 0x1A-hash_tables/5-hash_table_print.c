@@ -21,11 +21,7 @@ void hash_table_print(const hash_table_t *ht)
 
 	for (index = 0; index < ht->size; index++)
 	{
-		/* if index position is empty, continue */
-		if (ht->array[index] == NULL)
-			continue;
 		item = ht->array[index];
-
 		while (item)
 		{
 			if (found_first_element)
