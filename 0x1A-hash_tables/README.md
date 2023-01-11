@@ -70,11 +70,10 @@
 	<li>where <code>ht</code> is the hash table</li>
 	</ul></li>
 	<li>You should print the key/value in the order that they appear in the array of hash table
-
 	<ul>
 	<li>Order: array, list</li>
 	</ul></li>
-	<li>Format: <code>{'Name' : 'Obimba', 'Age' : 53}</li>
+	<li>Format: <code>{'Name' : 'Obimba', 'Age' : 53}</code></li>
 	<li>If <code>ht</code> is NULL, don’t print anything</li>
 	</ul>
 	</details>
@@ -85,7 +84,7 @@
 	<li>Prototype: <code>void hash_table_delete(hash_table_t *ht);</code>
 
 	<ul>
-	<li>where <code>ht</code> is the hash table</li>
+	<li>where <code>ht</code> is the hash table</code></li>
 	</ul></li>
 	</ul>
 	</details>
