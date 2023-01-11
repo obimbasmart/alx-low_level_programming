@@ -48,3 +48,15 @@
 	<li>In case of collision, add the new node at the beginning of the list</li>
 	</ul>
 	</details>
+
+4. <details><summary>Write a function that retrieves a value associated with a key</summary>
+	<ul>
+<li>Prototype: <code>char *hash_table_get(const hash_table_t *ht, const char *key);</code>
+
+<ul>
+<li>where <code>ht</code> is the hash table you want to look into</li>
+<li>and <code>key</code> is the key you are looking for</li>
+</ul></li>
+<li>Returns the value associated with the element, or <code>NULL</code> if <code>key</code> couldn’t be found</li>
+</ul>
+	</details>
