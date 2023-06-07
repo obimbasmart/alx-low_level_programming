@@ -14,3 +14,7 @@
 
 	Prototype: <code>int _strlen_recursion(char *s);</code>
 
+3. Write a function that returns the factorial of a given number.
+
+	Prototype: <code>int factorial(int n);</code>
+
