@@ -10,12 +10,10 @@ void _print_rev_recursion(char *str)
 	unsigned int idx;
 
 	idx = 0;
-	if (str[idx] == '\0')
+	if (*str)
 	{
-		_putchar('\n');
-		return;
+		_print_rev_recursion(&str[idx + 1]);
+		_putchar(str[idx]);
 	}
-	_print_rev_recursion(&str[idx + 1]);
-	_putchar(str[idx]);
 }
 
