@@ -33,3 +33,10 @@
 6. Write a function that returns 1 if the input integer is a prime number, otherwise return 0.
 
 	Prototype: <code>int is_prime_number(int n);</code>
+
+## Advanced
+100. Write a function that returns 1 if a string is a palindrome and 0 if not.
+
+	Prototype: <code>int is_palindrome(char *s);</code>
+
+	An empty string is a palindrome
