@@ -12,5 +12,7 @@ int _strlen_recursion(char *);
 int _pow_recursion(int x, int y);
 int _sqrt_recursion(int);
 int _get_sqrt_(int, int);
+int is_prime_number(int);
+int _is_prime(int, int);
 #endif /* MAIN_H */
 
