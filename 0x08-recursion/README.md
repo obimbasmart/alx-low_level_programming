@@ -36,7 +36,6 @@
 
 ## Advanced
 100. Write a function that returns 1 if a string is a palindrome and 0 if not.
-
 	Prototype: <code>int is_palindrome(char *s);</code>
 
 	An empty string is a palindrome
