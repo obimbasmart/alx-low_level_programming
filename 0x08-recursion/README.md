@@ -35,16 +35,18 @@
 	Prototype: <code>int is_prime_number(int n);</code>
 
 ## Advanced
-100. Write a function that returns 1 if a string is a palindrome and 0 if not.
-	Prototype: <code>int is_palindrome(char *s);</code>
 
-	An empty string is a palindrome
+100. Write a function that returns 1 if a string is a palindrome and 0 if not.
+
+		Prototype: <code>int is_palindrome(char *s);</code>
+
+		An empty string is a palindrome
 
 101. Write a function that compares two strings and returns 1 if the strings can be considered identical, otherwise return 0.
 
-	Prototype: <code>int wildcmp(char *s1, char *s2);</code>
+		Prototype: <code>int wildcmp(char *s1, char *s2);</code>
 
-	s2 can contain the special character <code>*</code>.
+		s2 can contain the special character <code>*</code>.
 
-	The special char * can replace any string (including an empty string)
+		The special char * can replace any string (including an empty string)
 
