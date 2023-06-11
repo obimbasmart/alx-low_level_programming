@@ -21,15 +21,12 @@ int main(int argc, char *argv[])
 	argv++; /* move to second arg */
 	cents = atoi(*argv);
 
-	if (cents < 0)
-		printf("%d\n", 0);
-
 	for (idx = 0; idx < num_coins; idx++)
 	{
 		total_coins += cents / valid_denoms[idx];
 		cents = cents % valid_denoms[idx];
 	}
-	printf("%d\n", total_coins);
+	printf("%d\n", (total_coins < 0) ? 0 : total_coins);
 	return (EXIT_SUCCESS);
 }
 
