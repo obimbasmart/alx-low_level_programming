@@ -33,3 +33,12 @@
 
 	- Prototype: <code>void free_grid(int **grid, int height);</code>
 	- Note that we will compile with your alloc_grid.c file. Make sure it compiles.
+
+## Advanced
+
+100. Write a function that concatenates all the arguments of your program.
+
+	- Prototype: <code>char *argstostr(int ac, char **av);</code>
+	- Returns NULL if ac == 0 or av == NULL
+	- Returns a pointer to a new string, or NULL if it fails
+	- Each argument should be followed by a \n in the new string
