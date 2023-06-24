@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * array_rante - create an array of integers
+ * array_range - create an array of integers
  * @min: mininmum integer start
  * @max: maximum integer stop
  * Return: pointer to array of integer
@@ -23,6 +23,7 @@ int *array_range(int min, int max)
 	{
 		array[id] = min;
 		min++;
+		id++;
 	}
 	return (array);
 }
