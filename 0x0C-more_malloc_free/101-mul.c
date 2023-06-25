@@ -2,13 +2,13 @@
 #include <ctype.h>
 /**
  * main - driver program: multiply args
- * @argc: lenght of argv
+ * @argc: length of argv
  * @argv: array of args
  * Return: int
  */
 int main(int argc, char *argv[])
 {
-	int product;
+	long long product;
 
 	product = 1;
 	if (argc < 3 || argc > 3)
@@ -25,16 +25,16 @@ int main(int argc, char *argv[])
 			printf("Error\n");
 			exit(98);
 		}
-		product *= atoi(*argv);
+		product *= strtoll(*argv, NULL, 10);
 		argv++;
 	}
-	printf("%d\n", product);
+	printf("%lld\n", product);
 	return (EXIT_SUCCESS);
 }
 
 
 /**
- * _isvalid_integer - check if a string is valid int
+ * _isvalid_integer - check if a string is a valid int
  * @str: string
  * Return: int - 0 if false, 1 if true
  */
