@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	long long product;
+	long product;
 
 	product = 1;
 	if (argc < 3 || argc > 3)
@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 		product *= strtoll(*argv, NULL, 10);
 		argv++;
 	}
-	printf("%lld\n", product);
+	printf("%ld\n", product);
 	return (EXIT_SUCCESS);
 }
 
