@@ -32,7 +32,10 @@
 	- If `min` > `max`, return `NULL`
 	- If `malloc` fails, return `NULL`
 
-100. Write a function that reallocates a memory block using malloc and free
+## Advanced
+
+
+6. Write a function that reallocates a memory block using malloc and free.
 
 	- Prototype: `void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);`
 	- where `ptr` is a pointer to the memory previously allocated with a call to malloc: `malloc(old_size)`
@@ -46,7 +49,7 @@
 	- Don’t forget to free ptr when it makes sense
 	- FYI: The standard library provides a different function: realloc. Run man realloc to learn more
 
-101. Write a program that multiplies two positive numbers.
+7. Write a program that multiplies two positive numbers.
 
 	- Usage: ```mul num1 num2```
 	- num1 and num2 will be passed in base 10
