@@ -8,6 +8,10 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
+	/* handle NULL pointer */
+	if (!f)
+		return;
+
 	/* call function */
 	f(name);
 }
