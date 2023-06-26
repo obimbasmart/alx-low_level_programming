@@ -1,6 +1,11 @@
 #ifndef HEADER_F
 #define HEADER_F
 
+/* builtins */
+#include <stdlib.h>
+#include <stddef.h>
+#include <string.h>
+
 /**
  * struct dog - a typical dog with attributes
  * @name: name of dog
@@ -16,9 +21,9 @@ struct dog
 	float age;
 	char *owner;
 };
-
 typedef struct dog dog_t;
 
 void init_dog(struct dog *, char *, float, char *);
 void print_dog(struct dog *d);
+dog_t *new_dog(char *name, float age, char *owner);
 #endif /* HEADER_H */
