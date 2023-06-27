@@ -6,7 +6,7 @@
 #include <stdlib.h>
 
 /**
- * struct operationData - structure holds data for maths calculation
+ * struct op - structure holds data for maths calculation
  * @opcode: operation code e.g +, -, /, *
  * @action: function associated for each opcode
  *
