@@ -38,13 +38,6 @@ int main(int argc, char *argv[])
 
 	result = action(atoi(argv[1]), atoi(argv[3]));
 
-	/* invalid result */
-	if (result < 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
-
 	printf("%d\n", result);
 
 	return (EXIT_SUCCESS);
