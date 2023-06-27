@@ -13,11 +13,11 @@
  * Description: This is a simple structure that holds information
  * about an operation and its corresponding action/function
  */
-typedef struct operationData
+typedef struct op
 {
 	char *opcode;
 	int (*action)(int, int);
-} operation_d;
+} op_t;
 
 int op_add(int, int);
 int op_sub(int, int);

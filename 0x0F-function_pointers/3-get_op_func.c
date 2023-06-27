@@ -12,7 +12,7 @@ int (*get_op_func(char *s))(int, int)
 {
 	int id;
 
-	operation_d op_array[] = {
+	op_t op_array[] = {
 		{ "+", op_add },
 		{ "-", op_sub },
 		{ "*", op_mul },
