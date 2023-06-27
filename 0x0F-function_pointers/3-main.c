@@ -20,6 +20,13 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
+	/* check for ZeroDivision Error */
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && argv[3][0] == '0')
+	{
+		printf("Error\n");
+		exit(100);
+	}
+
 	action = get_op_func(argv[2]);
 
 	/* invalid operation */
