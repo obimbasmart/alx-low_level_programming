@@ -15,7 +15,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	va_start(args, n);
 	if (!separator)
-		separator = "(nil)";
+		separator = "";
 
 	id = 0;
 
@@ -25,7 +25,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 		/* if last number */
 		if (n - id != 1)
-			printf("%s", separator);
+			printf("%s", separator ? separator : "(nil)");
 
 		id++;
 	}
