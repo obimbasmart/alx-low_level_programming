@@ -12,6 +12,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list args;
 	unsigned int id;
+	char *str;
 
 	va_start(args, n);
 	if (!separator)
@@ -21,11 +22,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	while (id < n)
 	{
-		printf("%s", va_arg(args, char *));
+		str = va_arg(args, char *);
+
+		printf("%s", str ? str : "(nil)");
 
 		/* if last number */
 		if (n - id != 1)
-			printf("%s", separator ? separator : "(nil)");
+			printf("%s", separator);
 
 		id++;
 	}
