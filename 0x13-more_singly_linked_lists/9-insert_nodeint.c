@@ -44,7 +44,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 }
 
 /**
- * listint_len - return the number of elements in a linked listint_t
+ * _listint_len - return the number of elements in a linked listint_t
  * @h: the head of the list
  *
  * Return: the number of nodes in the list
