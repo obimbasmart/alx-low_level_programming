@@ -27,7 +27,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 
 
 /**
- * listint_len - return the number of elements in a linked listint_t
+ * _listint_len - return the number of elements in a linked listint_t
  * @h: the head of the list
  *
  * Return: the number of nodes in the list
@@ -42,8 +42,8 @@ size_t _listint_len(const listint_t *h)
 
 	while (h)
 	{
-			n_nodes++;
-			h = h->next;
+		n_nodes++;
+		h = h->next;
 	}
 	return (n_nodes);
 
