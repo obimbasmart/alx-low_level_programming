@@ -78,3 +78,12 @@ typedef struct listint_s
 	- Prototype: `int delete_nodeint_at_index(listint_t **head, unsigned int index);`
 	- where `index` is the index of the node that should be deleted. Index starts at 0
 	- Returns: 1 if it succeeded, -1 if it failed
+
+11. Write a function that prints a `listint_t` linked list.
+
+	- Prototype: `size_t print_listint_safe(const listint_t *head);`
+	- Returns: the number of nodes in the list
+	- This function can print lists with a loop
+	- You should go through the list only once
+	- If the function fails, exit the program with status 98
+	- Output format: see example
