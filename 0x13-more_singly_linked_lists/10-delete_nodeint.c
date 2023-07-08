@@ -1,4 +1,5 @@
 #include "lists.h"
+
 /**
  * delete_nodeint_at_index - delete a node in a LL
  * @index: position of node
@@ -18,9 +19,10 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		return (-1);
 
 	/* loop until index is 0 */
+	index++;
 	while (index--)
 	{
-		if (index < 0) /* if we reached the element */
+		if (index == 0) /* if we reached the element */
 		{
 			/* get the next_node */
 			next_node = (*head)->next;
@@ -33,6 +35,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		/* assign current pointer to next_pointer */
 		head = &(*head)->next;
 	}
+	return (1);
 }
 
 
@@ -48,17 +51,13 @@ size_t _listint_len(const listint_t *h)
 
 	n_nodes = 0;
 
-	if (h == NULL)
-	{
+	if (!h)
 		return (0);
-	}
 
-	else
+	while (h)
 	{
-		do {
-			n_nodes++;
-			h = h->next;
-		} while (h != NULL);
+		n_nodes++;
+		h = h->next;
 	}
 	return (n_nodes);
 }
