@@ -26,6 +26,10 @@ int main(int argc, char *argv[])
 		print_to_stderr("Error: Can't read from file", file_from_name, 98);
 
 	buffer = malloc(sizeof(char) * BUFFER_SIZE);
+
+	if (!buffer) /* malloc fails */
+		exit (99);
+
 	file_to_desc = open(file_to_name, O_WRONLY | O_CREAT | O_TRUNC, 00664);
 
 	if (file_to_desc < 0)
