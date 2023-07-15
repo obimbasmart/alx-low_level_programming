@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	buffer = malloc(sizeof(char) * BUFFER_SIZE);
 
 	if (!buffer) /* malloc fails */
-		exit (99);
+		exit(99);
 
 	file_to_desc = open(file_to_name, O_WRONLY | O_CREAT | O_TRUNC, 00664);
 
@@ -50,7 +50,6 @@ int main(int argc, char *argv[])
 
 	if (close_to_desc < 0)
 		print_to_stderr_int("Error: Can't close fd", file_to_desc, 100);
-
 	return (0);
 }
 
@@ -73,7 +72,7 @@ void copy_content(int file_from_desc, int file_to_desc,
 	{
 		write_desc = write(file_to_desc, buffer, read_desc);
 		if (write_desc < 0)
-			print_to_stderr("Error: Can't write to %s\n", file_to_name, 99);
+			print_to_stderr("Error: Can't write to", file_to_name, 99);
 
 		read_desc = read(file_from_desc, buffer, BUFFER_SIZE);
 	}
