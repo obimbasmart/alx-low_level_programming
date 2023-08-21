@@ -14,7 +14,7 @@ To create a dynamic library in C, take the following steps:
     - this would create a dynamic library name `liball.so`
 3. Add the location of your library files into the environmental variable to allow compiler to find it
     - run `export LD_LIBRARY_PATH=$PWD:$LD_LIBRARY_PATH` to add library to env path
-4- To compile our program `main.c` with the dynamic libray, run the command:
+4. To compile our program `main.c` with the dynamic libray, run the command:
     - `gcc -L . main.c -l all -o output`
     - `all` refers to the name of our dynmanic library
     -  use the `-L` option to tell the program where to find the library in this case `.` is used to denote the current working directory
@@ -27,15 +27,13 @@ With python one can call dynamic libraries created in C
 
 - ```python
 
-        """ call the strlen() function from liball.so"""
+        # call the _strlen() function from liball.so"""
         #!/usr/bin/python3
         import ctypes
         spam = ctypes.CDLL(`./liball.so')
 
-        span.strlen(str)
-
-```
-
+        length = spam._strlen(str)
+    ```
 
 ## Mandatory
 
