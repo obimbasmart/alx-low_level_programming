@@ -1,7 +1,7 @@
 # C - Dynamic Libraries
 > In this project I learnt the difference between dynamic and static libraries; and how to create and use a dynamic libraries. Now I know what happens when we write `include <stdio.h>`, `include "main.h"`.
 
-> The advanced task required creating a dynamic library that contains C functions that can be called from Python. At first I imagined how possible that would be. After a little research I realized Python has a module named `ctypes` which did the magic.
+> The advanced task required creating a dynamic library that contains C functions that can be called from Python. At first I imagined how possible that would be. After a little research I realized Python has a module named `ctypes` that does the magic.
 
 
 ## Learnings
@@ -13,25 +13,28 @@ To create a dynamic library in C, take the following steps:
 2. run the command `gcc -shared -o liball.so *.o` to put together those objects files into one library.
     - this would create a dynamic library name `liball.so`
 3. Add the location of your library files into the environmental variable to allow compiler to find it
-    - run `export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH` to add library to env path
+    - run `export LD_LIBRARY_PATH=$PWD:$LD_LIBRARY_PATH` to add library to env path
 4- To compile our program `main.c` with the dynamic libray, run the command:
     - `gcc -L . main.c -l all -o output`
-        - `all` refers to the name of our dynmanic library
-        - use the `-L` option to tell the program where to find the library in this case `.` is used
-        - the `l` option tells the compiler to look for the library
+    - `all` refers to the name of our dynmanic library
+    -  use the `-L` option to tell the program where to find the library in this case `.` is used to denote the current working directory
+    -  the `l` option tells the compiler to look for the library
 
 ### Using the Library in Python
 
 With python one can call dynamic libraries created in C
 - first import `ctypes` and use the `CDLL` function: see example below:
 
-- ```
+- ```python
+
         """ call the strlen() function from liball.so"""
         #!/usr/bin/python3
         import ctypes
         spam = ctypes.CDLL(`./liball.so')
 
-        span.strlen(str) ```
+        span.strlen(str)
+
+```
 
 
 ## Mandatory
