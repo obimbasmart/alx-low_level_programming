@@ -30,17 +30,29 @@
 	- If `filename` is NULL return -1
 	- If text_content is NULL, do not add anything to the file. Return 1 if the file exists and -1 if the file does not exist or if you do not have the required permissions to write the file
 
-3. Write a program that copies the content of a file to another file.
-
-Usage: `cp file_from file_to`
-	- if the number of argument is not the correct one, exit with code 97 and print Usage: cp file_from file_to, followed by a new line, on the POSIX standard error
-	- if file_to already exists, truncate it
-	- if file_from does not exist, or if you can not read it, exit with code 98 and print Error: Can't read from file `NAME_OF_THE_FILE`, followed by a new line, on the POSIX standard error
-	- where NAME_OF_THE_FILE is the first argument passed to your program
-	- if you can not create or if write to file_to fails, exit with code 99 and print Error: Can't write to `NAME_OF_THE_FILE`, followed by a new line, on the POSIX standard error
-	- where NAME_OF_THE_FILE is the second argument passed to your program
-	- if you can not close a file descriptor , exit with code 100 and print Error: Can't close fd FD_VALUE, followed by a new line, on the POSIX standard error
-	- where `FD_VALUE` is the value of the file descriptor
-	- Permissions of the created file: rw-rw-r--. If the file already exists, do not change the permissions
-	- You must read 1,024 bytes at a time from the file_from to make less system calls. Use a buffer
-	- You are allowed to use `dprintf`
+<details>
+  <summary><code>copy_file.c</code> - Copy the content of one file to another</summary>
+  <ul>
+    <li>Usage: <code>cp file_from file_to</code></li>
+    <li>If the number of arguments is not correct, exit with code 97 and print:<br>
+      <pre>Usage: cp file_from file_to</pre>
+      followed by a new line, on the POSIX standard error.
+    </li>
+    <li>If <code>file_to</code> already exists, truncate it.</li>
+    <li>If <code>file_from</code> does not exist, or if you cannot read it, exit with code 98 and print:<br>
+      <pre>Error: Can't read from file NAME_OF_THE_FILE</pre>
+      followed by a new line, on the POSIX standard error, where <code>NAME_OF_THE_FILE</code> is the first argument passed to your program.
+    </li>
+    <li>If you cannot create or if writing to <code>file_to</code> fails, exit with code 99 and print:<br>
+      <pre>Error: Can't write to NAME_OF_THE_FILE</pre>
+      followed by a new line, on the POSIX standard error, where <code>NAME_OF_THE_FILE</code> is the second argument passed to your program.
+    </li>
+    <li>If you cannot close a file descriptor, exit with code 100 and print:<br>
+      <pre>Error: Can't close fd FD_VALUE</pre>
+      followed by a new line, on the POSIX standard error, where <code>FD_VALUE</code> is the value of the file descriptor.
+    </li>
+    <li>Permissions of the created file: <code>rw-rw-r--</code>. If the file already exists, do not change the permissions.</li>
+    <li>You must read 1,024 bytes at a time from <code>file_from</code> to make fewer system calls. Use a buffer.</li>
+    <li>You are allowed to use <code>dprintf</code>.</li>
+  </ul>
+</details>
