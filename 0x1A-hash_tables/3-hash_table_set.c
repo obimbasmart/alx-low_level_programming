@@ -17,7 +17,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (key[0] == '\0' || !ht)
 		return (0);
 
-	/* get index */
 	index = key_index((unsigned char *)key, ht->size);
 
 	/* get current node in that position*/
@@ -27,7 +26,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!current_hash_node)
 	{
 		/*add item directry */
-		/*create a new node */
 		new_hash_node = create_new_node(key, value);
 		if (!new_hash_node)
 			return (0);
