@@ -19,10 +19,13 @@ def get_perimeter(y, x, grid):
     idx = [(x - 1, y), (x, y + 1), (x + 1, y), (x, y - 1)]
     if (grid[x][y]):
         for id in idx:
+            if id[0] < 0 or id[1] < 0:
+                perimeter += 1
+                continue
             try:
                 if not grid[id[0]][id[1]]:
                     perimeter += 1
-            except IndexError:
+            except Exception:
                 perimeter += 1
     return (perimeter)
 
