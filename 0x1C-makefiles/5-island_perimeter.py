@@ -3,9 +3,9 @@
 
 
 def island_perimeter(grid):
+    """calculate the perimeter of an island grid"""
     x_len = len(grid)
     y_len = len(grid[0])
-    """calculate the perimeter of an island grid"""
     perimeter = 0
     for x in range(x_len):
         for y in range(y_len):
