@@ -3,13 +3,12 @@ SRC=main.c school.c
 NAME=school
 OBJ = $(SRC:.c=.o)
 RM = rm
-TMP_FILES = $(wildcard *~ #*#)
 
 all : $(OBJ) m.h
 	$(CC) $(OBJ) -o $(NAME)
 
 tmp_clean:	# remove all tmp files
-	$(RM) -f $(TMP_FILES)
+	$(RM) -f *~
 clean: tmp_clean	# remove the executable
 	$(RM) -f $(NAME)
 oclean:		# remove the object files
