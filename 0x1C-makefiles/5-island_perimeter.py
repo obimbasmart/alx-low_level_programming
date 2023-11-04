@@ -13,6 +13,7 @@ def island_perimeter(grid):
 
     return perimeter
 
+
 def get_perimeter(y, x, grid):
     """get perimeter of a single cell"""
     perimeter = 0
@@ -28,5 +29,3 @@ def get_perimeter(y, x, grid):
             except Exception:
                 perimeter += 1
     return (perimeter)
-
-
