@@ -16,10 +16,7 @@ int exponential_search(int *array, size_t size, int value)
 		return (-1);
 
 	if (array[0] == value)
-	{
-		printf("Value checked array[%d] = [%d]\n", 0, array[0]);
 		return (0);
-	}
 
 	i = 1;
 	while (i < size && value >= array[i])
@@ -29,7 +26,7 @@ int exponential_search(int *array, size_t size, int value)
 	}
 	printf("Value found between indexes [%ld] and [%ld]\n",
 			i / 2, min(i, size - 1));
-	return (binary_search_exp(array, i / 2, min(size, i - 1), value));
+	return (binary_search_exp(array, i / 2, min(size - 1, i), value));
 }
 
 
