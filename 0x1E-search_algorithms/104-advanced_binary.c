@@ -20,12 +20,12 @@ int advanced_binary(int *array, size_t size, int value)
 	print_array(array, low, high);
 
 	if (array[mid] == value)
-		return (array[mid] == array[mid - 1] ? mid - 1 : mid);
+		return (_advanced_binary(array, low, mid, value));
 
 	if (mid == 0 || mid == size - 1)
 		return (-1);
 
-	if (array[mid] > value)
+	if (array[mid] >= value)
 		return (_advanced_binary(array, low, mid - 1, value));
 	return (_advanced_binary(array, mid + 1, high, value));
 }
