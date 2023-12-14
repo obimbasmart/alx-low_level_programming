@@ -21,18 +21,20 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	node = step_node(list, step);
 	prev = 0;
 
-	while (node->next && node->n < value)
+	while (1)
 	{
 		printf("Value checked at index [%ld] = [%d]\n", step, node->n);
+		if (node->n > value || step >= size)
+			break;
+
 		prev = step;
-		prev_node = node;
 		step += sqrt(size);
+		prev_node = node;
 		node = step_node(node, sqrt(size));
 	}
 
-	if (prev == 0)
-		printf("Value checked at index [%ld] = [%d]\n", step, node->n);
-	printf("Value found between indexes [%ld] and [%ld]\n", prev, step);
+	printf("Value found between indexes [%ld] and [%ld]\n", prev,
+			(step > size - 1) ? size - 1 : step);
 
 	while (prev_node)
 	{
