@@ -23,14 +23,14 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 
 	while (node->next && node->n < value)
 	{
-		printf("Value checked array[%ld] = [%d]\n", step, node->n);
+		printf("Value checked at index [%ld] = [%d]\n", step, node->n);
 		prev = step;
 		prev_node = node;
 		node = step_node(node, sqrt(size));
 	}
 
 	if (prev == 0)
-		printf("Value checked array[%ld] = [%d]\n", step, node->n);
+		printf("Value checked at index [%ld] = [%d]\n", step, node->n);
 	printf("Value found between indexes [%ld] and [%ld]\n", prev, step);
 
 	while (prev_node)
@@ -49,7 +49,6 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
  * step_node - move node @n steps ahead
  * @node: pointer to pointer to node
  * @n: number of steps
- * @size: size of linked list
  * Return: nothing
  */
 listint_t *step_node(listint_t *node, size_t n)
