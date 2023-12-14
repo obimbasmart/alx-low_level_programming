@@ -26,6 +26,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		printf("Value checked at index [%ld] = [%d]\n", step, node->n);
 		prev = step;
 		prev_node = node;
+		step += sqrt(size);
 		node = step_node(node, sqrt(size));
 	}
 
